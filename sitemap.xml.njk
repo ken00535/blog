@@ -1,0 +1,33 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+siteWideUpdate: 2021-07-12
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all %}
+  {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  {% set regExp = r/tags/g %}
+  {% set pageDate = page.date | sitemapDateTimeString %}
+  {% set isHomePage = false %}
+  {% if absoluteUrl == metadata.url + '/' %}
+    {% set isHomePage = true %}
+  {% endif %}
+
+  {% if not regExp.test(absoluteUrl) %}  
+    <url>
+      <loc>{{ absoluteUrl }}</loc>
+      <changefreq>{{ "daily" if isHomePage else "daily" }}</changefreq>
+      <priority>{{ "1" if isHomePage else "0.8" }}</priority>
+      <lastmod>{{ pageDate }}</lastmod>
+    </url>
+  {% else %}
+    <url>
+      <loc>{{ absoluteUrl }}</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
+      <lastmod>{{ pageDate }}</lastmod>
+    </url>
+  {% endif %}
+{%- endfor %}
+</urlset>

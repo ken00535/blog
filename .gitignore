@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+js/min.js
+js/min.js.map
+.vscode/
+.netlify/
+export
+_site
+og-image-generator/output.png
+og-image-generator/cover.png

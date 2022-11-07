@@ -1,0 +1,12 @@
+---
+templateClass: tmpl-home
+---
+{% extends "zh-tw/layouts/base.njk" %}
+
+{% block extraArticleHeader %}
+   <aside class="w-full" style="text-align:left;">
+      這是 Ken Chen 的部落格，分享後端架構與技術開發相關內容。想持續關注的話可以訂閱 <a href="https://blog.kenwsc.com/feed/feed.xml" rel="noreferrer noopener" target="_blank">RSS</a>，部落格原始碼則是放在 <a href="https://github.com/ken00535/blog" rel="noreferrer noopener" target="_blank">GitHub</a>。
+   </aside>
+{% endblock %}
+
+{{ content | safe }}

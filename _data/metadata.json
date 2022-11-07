@@ -1,0 +1,34 @@
+{
+  "title": "Ken Chen's Blog",
+  "url": "https://blog.kenwsc.com",
+  "domain": "blog.kenwsc.com",
+  "description": "Ken Chen's Blog",
+  "genre": "Insert a schema.org genre",
+  "googleAnalyticsId": "G-3VBVCXV9Z0",
+  "sendWebVitals": false,
+  "linkedinUrl": "https://www.linkedin.com/in/ken00535",
+  "feed": {
+    "subtitle": "Ken Chen's Blog",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://blog.kenwsc.com"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://blog.kenwsc.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Ken Chen's Blog",
+    "twitterHandle": ""
+  },
+  "authors": {
+    "kenwschen": {
+      "name": "kenwschen",
+      "intro": "Empty",
+      "avatarUrl": "/img/authors/kenwschen_logo.jpeg"
+    }
+  },
+  "publisher": {
+    "name": "Ken Chen's Blog"
+  }
+}
