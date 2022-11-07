@@ -8,15 +8,15 @@
 	<updated>2022-02-21T00:00:00-00:00</updated>
 	<id>https://blog.kenwsc.com</id>
 	<author>
-		<name>Ken Chen&#39;s Blog</name>
+		<name>Ken Chen</name>
 		<email></email>
 	</author>
 	
 	<entry>
 		<title>Test Title</title>
-		<link href="https://blog.kenwsc.com/posts/kenwschen/android-apk-decompile-intro-1/"/>
+		<link href="https://blog.kenwsc.com/posts/test/"/>
 		<updated>2022-02-21T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/kenwschen/android-apk-decompile-intro-1/</id>
+		<id>https://blog.kenwsc.com/posts/test/</id>
 		<content type="html">
 		  &lt;!-- summary --&gt;
 &lt;!-- Test --&gt;

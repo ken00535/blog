@@ -5,12 +5,12 @@
   "feed_url": "https://blog.kenwsc.com/feed/feed.json",
   "description": "Ken Chen&#39;s Blog",
   "author": {
-    "name": "Ken Chen&#39;s Blog",
+    "name": "Ken Chen",
     "url": ""
   },
   "items": [{
-      "id": "https://blog.kenwsc.com/posts/kenwschen/android-apk-decompile-intro-1/",
-      "url": "https://blog.kenwsc.com/posts/kenwschen/android-apk-decompile-intro-1/",
+      "id": "https://blog.kenwsc.com/posts/test/",
+      "url": "https://blog.kenwsc.com/posts/test/",
       "title": "Test Title",
       "content_html": "<!-- summary -->\n<!-- Test -->\n<!-- summary -->\n<p>Test Content</p>\n",
       "date_published": "2022-02-21T00:00:00-00:00"
