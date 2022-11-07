@@ -25,7 +25,7 @@
       <loc>https://blog.kenwsc.com/about/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
-      <lastmod>2022-11-07T07:39:59.133Z</lastmod>
+      <lastmod>2022-11-07T07:40:33.875Z</lastmod>
     </url>
   
   
@@ -39,7 +39,7 @@
       <loc>https://blog.kenwsc.com/archive/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
-      <lastmod>2022-11-07T07:39:59.133Z</lastmod>
+      <lastmod>2022-11-07T07:40:33.875Z</lastmod>
     </url>
   
   
@@ -55,7 +55,7 @@
       <loc>https://blog.kenwsc.com/</loc>
       <changefreq>daily</changefreq>
       <priority>1</priority>
-      <lastmod>2022-11-07T07:39:59.157Z</lastmod>
+      <lastmod>2022-11-07T07:40:33.895Z</lastmod>
     </url>
   
   
@@ -69,7 +69,7 @@
       <loc>https://blog.kenwsc.com/page-list/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
-      <lastmod>2022-11-07T07:39:59.157Z</lastmod>
+      <lastmod>2022-11-07T07:40:33.899Z</lastmod>
     </url>
   
   
@@ -83,7 +83,7 @@
       <loc>https://blog.kenwsc.com/robots.txt</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
-      <lastmod>2022-11-07T07:39:59.157Z</lastmod>
+      <lastmod>2022-11-07T07:40:33.899Z</lastmod>
     </url>
   
   
@@ -97,7 +97,7 @@
       <loc>https://blog.kenwsc.com/tags/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-11-07T07:39:59.157Z</lastmod>
+      <lastmod>2022-11-07T07:40:33.899Z</lastmod>
     </url>
   
   
@@ -111,7 +111,7 @@
       <loc>https://blog.kenwsc.com/tags/golang/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-11-07T07:39:59.157Z</lastmod>
+      <lastmod>2022-11-07T07:40:33.899Z</lastmod>
     </url>
   
 </urlset>
