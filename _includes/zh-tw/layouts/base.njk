@@ -12,14 +12,14 @@
     {% if isdevelopment %}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     {% else %}
-    <link rel="icon" href="{{ '/img/favicon/favicon-192x192.png' | addHash }}" type="image/png">
+    <link rel="icon" href="{{ '/img/favicon/favicon.png' | addHash }}" type="image/png">
     {% endif %}
     <meta name="theme-color" content="#5789d3">
     <title>{{ renderData.title or title or metadata.title | escape }}</title>
     <meta property="og:title" content="{{ renderData.title or title or metadata.title | escape  }}">
     <meta name="twitter:title" content="{{ renderData.title or title or metadata.title | escape  }}">
     <meta name="twitter:card" content="summary_large_image">
-    {% set coverImage = image or '/img/favicon/favicon-512x512.png' %}
+    {% set coverImage = image or '/img/favicon/favicon.png' %}
     {% set desc = renderData.description or description %}
     {% set summaryDesc = content | summary | striptags %}
     {% if summaryDesc %}
@@ -74,18 +74,14 @@
     <header>
       <nav>
         <div id="nav">
-          <div class="nav-title">
-            <label for="menu__control" class="menu__btn">
-              <span>Menu</span>
-            </label>
-          </div>
           {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
           <div class ="nav__links">
-          {%- for entry in collections.all | eleventyNavigation %}
-            {% if "/en" not in entry.url %}
-              <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-            {% endif %}
-          {%- endfor %}
+            <a href="{{ '/' | url }}" title="Homepage">Home</a>
+            {%- for entry in collections.all | eleventyNavigation %}
+              {% if "/en" not in entry.url %}
+                <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+              {% endif %}
+            {%- endfor %}
           </div>
         </div>
         <div id="reading-progress" aria-hidden="true"></div>
