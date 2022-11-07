@@ -1783,10 +1783,6 @@ footer>* {
   color: var(--fg);
 }
 
-.postlist__item+.postlist__item {
-  margin-top: 32px;
-}
-
 .postlist__title>a:first-child {
   margin-right: 10px;
 }
@@ -1923,12 +1919,14 @@ footer>* {
   }
 
   .postlist__item {
+    padding-top: 8px;
+    padding-bottom: 8px;
     display: flex;
     align-items: flex-start;
   }
 
   .postlist__title {
-    font-size: 20px;
+    font-size: 1rem;
     margin: 0 0 0 24px;
   }
 
