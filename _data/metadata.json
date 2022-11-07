@@ -18,15 +18,8 @@
     "url": "https://blog.kenwsc.com/feed/feed.json"
   },
   "author": {
-    "name": "Ken Chen's Blog",
+    "name": "Ken Chen",
     "twitterHandle": ""
-  },
-  "authors": {
-    "kenwschen": {
-      "name": "kenwschen",
-      "intro": "Empty",
-      "avatarUrl": "/img/authors/kenwschen_logo.jpeg"
-    }
   },
   "publisher": {
     "name": "Ken Chen's Blog"

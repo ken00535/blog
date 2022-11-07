@@ -1,5 +1,5 @@
 ---
-title: Archive
+title: 文章列表
 layout: zh-tw/layouts/common.njk
 eleventyNavigation:
   key: Archive
@@ -14,5 +14,4 @@ permalink: /archive/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }
 
 {% set postslist = posts %}
 {% include "zh-tw/postslist.njk" %}
-
 {% include "zh-tw/pagination.njk" %}

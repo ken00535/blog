@@ -86,7 +86,6 @@
         </div>
         <div id="reading-progress" aria-hidden="true"></div>
       </nav>
-      <h1 class="w-full">{{ title }}</h1>
       {% block extraArticleHeader %}{% endblock %}
       <dialog id="message"></dialog>
     </header>
@@ -104,7 +103,7 @@
         <a href="{{ metadata.linkedinUrl | url }}" target="_blank" rel="noreferrer noopener"><img src="/img/icons/icon_social media_linkedln.svg" alt="linkedin" /></a>
         <a href="{{ metadata.feed.id + metadata.feed.path | url }}" target="_blank" rel="noreferrer noopener"><img src="/img/icons/rss-feed.svg" alt="rss feed" /></a>
       </div>
-      <div class="copyright">&copy 2022 Ken Chen's Tech Blog, based on <a href="https://github.com/google/eleventy-high-performance-blog" target="_blank">eleventy-high-performance-blog</a>.</div>
+      <div class="copyright">&copy 2022 Ken Chen's Blog, based on <a href="https://github.com/google/eleventy-high-performance-blog" target="_blank">eleventy-high-performance-blog</a>.</div>
     </footer>
 
     <!-- Current page: {{ page.url | url }} -->
