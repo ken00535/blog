@@ -10,35 +10,30 @@ const PORT = process.env.PORT || 3000
 const getPath = name => path.join(__dirname, name)
 
 // check argv
-const author = process.argv[2]
-const post = process.argv[3]
-const lang = process.argv[4] || ""
+const post = process.argv[2]
+const lang = process.argv[3] || ""
 
-// npm run og-image -- "huli" "how-i-hacked-glints-and-your-resume"
+// npm run og-image -- "how-i-hacked-glints-and-your-resume"
 
-if (!author || !post) {
-  console.error('Please input author and post, example: npm run og-image -- "huli" "xss-article"')
+if (!post) {
+  console.error('Please input author and post, example: npm run og-image -- "xss-article"')
   process.exit(1)
 }
 
 // get post and author info
-const postPath = path.join(__dirname, '../', lang, 'posts', author, post + '.md')
+const postPath = path.join(__dirname, '../', lang, 'posts', post + '.md')
 console.log(`Path: ${postPath}`)
 
 let postMeta
 try {
   const postContent = fs.readFileSync(postPath, 'utf8')
   postMeta = frontMatter(postContent)
-} catch(err) {
+} catch (err) {
   console.error('Read post file failed:', err)
   process.exit(2)
 }
 
-const metadata = JSON.parse(fs.readFileSync(path.join(__dirname, "../", "_data", "metadata.json"), 'utf8'))
-const authorData = metadata.authors[author]
-
 const template = fs.readFileSync(getPath('resources/template.html'), 'utf8')
-  .replace(/{{authorName}}/g, authorData.name)
   .replace(/{{title}}/g, postMeta.attributes.title)
   .replace(/{{publishedDate}}/g, postMeta.attributes.date.toISOString().substr(0, 10))
 
@@ -50,10 +45,6 @@ function startServer() {
       resolve()
     })
 
-    app.get('/author.png', (req, res) => {
-      res.send(fs.readFileSync(path.join(__dirname, "../", authorData.avatarUrl)))
-    })
-
     app.get('/', (req, res) => {
       res.send(template)
     })
@@ -62,7 +53,7 @@ function startServer() {
     // authorName
     // publishedDate
 
-    app.use(express.static(path.join(__dirname ,'resources')));
+    app.use(express.static(path.join(__dirname, 'resources')));
 
   })
 }
@@ -72,7 +63,7 @@ function escape(str) {
   return str.replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
-async function main(){
+async function main() {
   await startServer()
   const browser = await puppeteer.launch({
     args: ['--no-sandbox']
