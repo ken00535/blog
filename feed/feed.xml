@@ -147,6 +147,42 @@ lost lost field that should have
 	</entry>
 	
 	<entry>
+		<title>用 VirtualBox 開啟實體硬碟中的 Windows</title>
+		<link href="https://blog.kenwsc.com/posts/using-physical-disc-with-virtualbox/"/>
+		<updated>2022-10-07T00:00:00-00:00</updated>
+		<id>https://blog.kenwsc.com/posts/using-physical-disc-with-virtualbox/</id>
+		<content type="html">
+		  &lt;p&gt;如果用 Linux 當開發環境，常常會碰到一個問題：因為一般企業使用的管理系統沒有 Linux 版本，導致有些操作必須使用 Windows 來完成。對於大部分的應用來說，在 VirtualBox 內安裝 Windows 可能就能解決，問題是，通常 VirtualBox 的 Windows 都是由工程師自行安裝，不是正式授權；再來，在 VirtualBox 內安裝 Windows，意味加上原來預設的 Windows，硬碟內要有兩套 Windows，這真的讓人很難接受，一套已經很佔空間了，居然還要兩套？&lt;/p&gt;
+&lt;p&gt;於是我有個想法，要是 VirtualBox 可以用實體空間來開機的話，就能直接在 VirtualBox 執行原本配置的系統，如此一來，可以用 IT 已經安裝好的授權軟體不說，也省掉了後續資料交換的麻煩。Google 後發現還真的有這種應用，當然馬上試試看。&lt;/p&gt;
+&lt;h2 id=&quot;%E5%88%97%E5%87%BA%E5%88%86%E5%8D%80&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#%E5%88%97%E5%87%BA%E5%88%86%E5%8D%80&quot;&gt;#&lt;/a&gt; 列出分區&lt;/h2&gt;
+&lt;p&gt;首先因為是使用硬碟的資料，我們需要確認 Windows 安裝在哪個 Partition，使用 fdisk -l 列出所有 Partition 的狀態&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ken:~$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fdisk&lt;/span&gt; -l /dev/nvme0n1&lt;br&gt;Disk /dev/nvme0n1: &lt;span class=&quot;token number&quot;&gt;119.2&lt;/span&gt; GiB, &lt;span class=&quot;token number&quot;&gt;128035676160&lt;/span&gt; bytes, &lt;span class=&quot;token number&quot;&gt;250069680&lt;/span&gt; sectors&lt;br&gt;Units: sectors of &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; * &lt;span class=&quot;token number&quot;&gt;512&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;512&lt;/span&gt; bytes&lt;br&gt;Sector size &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;logical/physical&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;token number&quot;&gt;512&lt;/span&gt; bytes / &lt;span class=&quot;token number&quot;&gt;512&lt;/span&gt; bytes&lt;br&gt;I/O size &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;minimum/optimal&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;token number&quot;&gt;512&lt;/span&gt; bytes / &lt;span class=&quot;token number&quot;&gt;512&lt;/span&gt; bytes&lt;br&gt;Disklabel type: gpt&lt;br&gt;Disk identifier: 664C31C9-8F24-4D89-B16A-426FDCDBB716&lt;br&gt;Device             Start       End   Sectors  Size Type&lt;br&gt;/dev/nvme0n1p1      &lt;span class=&quot;token number&quot;&gt;2048&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;534527&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;532480&lt;/span&gt;  260M EFI System&lt;br&gt;/dev/nvme0n1p2    &lt;span class=&quot;token number&quot;&gt;534528&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;567295&lt;/span&gt;     &lt;span class=&quot;token number&quot;&gt;32768&lt;/span&gt;   16M Microsoft reserved&lt;br&gt;/dev/nvme0n1p3    &lt;span class=&quot;token number&quot;&gt;567296&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;111706111&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;111138816&lt;/span&gt;   53G Microsoft basic data&lt;br&gt;/dev/nvme0n1p4 &lt;span class=&quot;token number&quot;&gt;248020992&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;250068991&lt;/span&gt;   &lt;span class=&quot;token number&quot;&gt;2048000&lt;/span&gt; 1000M Windows recovery environment&lt;br&gt;/dev/nvme0n1p5 &lt;span class=&quot;token number&quot;&gt;111706112&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;112504831&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;798720&lt;/span&gt;  390M Linux filesystem&lt;br&gt;/dev/nvme0n1p6 &lt;span class=&quot;token number&quot;&gt;112504832&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;144502783&lt;/span&gt;  &lt;span class=&quot;token number&quot;&gt;31997952&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;.3G Linux swap&lt;br&gt;/dev/nvme0n1p7 &lt;span class=&quot;token number&quot;&gt;144502784&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;248020991&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;103518208&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;49&lt;/span&gt;.4G Linux filesystem&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以看到 Windows 的資料位於 dev/nvme0n1&lt;/p&gt;
+&lt;h2 id=&quot;%E5%89%B5%E5%BB%BA-vmdk-%E6%AA%94&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#%E5%89%B5%E5%BB%BA-vmdk-%E6%AA%94&quot;&gt;#&lt;/a&gt; 創建 VMDK 檔&lt;/h2&gt;
+&lt;p&gt;接著，為了讓 VirtualBox 可以從實體硬碟開機，我們需要建立 vmdk 檔來表示實體硬碟。使用 VirtualBox 指令&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ken:~$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; VBoxManage internalcommands createrawvmdk -filename ~/vmdk/windows_10.vmdk -rawdisk /dev/nvme0n1p1&lt;br&gt;RAW &lt;span class=&quot;token function&quot;&gt;host&lt;/span&gt; disk access VMDK &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; /home/ken/vmdk/windows_10.vmdk created successfully.&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;%E5%89%B5%E5%BB%BA%E8%99%9B%E6%93%AC%E6%A9%9F&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#%E5%89%B5%E5%BB%BA%E8%99%9B%E6%93%AC%E6%A9%9F&quot;&gt;#&lt;/a&gt; 創建虛擬機&lt;/h2&gt;
+&lt;p&gt;再來，開啟 VirtualBox，用剛剛建好的 vmdk 檔來開機&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.kenwsc.com/img/posts/using-physical-disc-with-virtualbox/virtualbox-1.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;這邊要注意，雖然我們的系統安裝在 SSD，使用的是 NVMe，但 VirtualBox 的 NVMe 似乎有問題，因此這邊選擇用 SATA&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.kenwsc.com/img/posts/using-physical-disc-with-virtualbox/virtualbox-2.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;前面看到 nvme0n1 開頭是 EFI，因此記得要 Enable EFI&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.kenwsc.com/img/posts/using-physical-disc-with-virtualbox/virtualbox-3.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E5%95%9F%E5%8B%95%E8%99%9B%E6%93%AC%E6%A9%9F&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#%E5%95%9F%E5%8B%95%E8%99%9B%E6%93%AC%E6%A9%9F&quot;&gt;#&lt;/a&gt; 啟動虛擬機&lt;/h2&gt;
+&lt;p&gt;設定都完成後，只要開啟 Virtual Machine，應該能看到 GRUB 的畫面，選擇 Windows Boot Manager，進入 Windows，完工。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.kenwsc.com/img/posts/using-physical-disc-with-virtualbox/virtualbox-4.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E5%B0%8F%E7%B5%90&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#%E5%B0%8F%E7%B5%90&quot;&gt;#&lt;/a&gt; 小結&lt;/h2&gt;
+&lt;p&gt;使用 VirtualBox 開啟 Windows 後，就能省掉很多資料交換的麻煩，但畢竟是 Virtual Machine，使用上不比 Native，可能會有些狀況；另外，我電腦的 Windows 跟 Ubuntu 開機都安裝在 SSD，要用 EFI 從 dev/nvme0n1 開機，但如果可以的話，最好將兩個系統切開，免得不小心開到 Ubuntu，造成資料損壞。&lt;/p&gt;
+&lt;h2 id=&quot;reference&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#reference&quot;&gt;#&lt;/a&gt; Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.jamieweb.net/blog/booting-a-physical-windows-10-disk-using-virtualbox-on-linux/&quot;&gt;Booting a Physical Windows 10 Disk Using VirtualBox on Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.serverwatch.com/server-tutorials/using-a-physical-hard-drive-with-a-virtualbox-vm.html&quot;&gt;Using a Physical Hard Drive with a VirtualBox VM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+		</content>
+	</entry>
+	
+	<entry>
 		<title>關於消息的三層語義：以 RabbitMQ 為例</title>
 		<link href="https://blog.kenwsc.com/posts/three-semantics-of-rabbitmq/"/>
 		<updated>2022-10-22T00:00:00-00:00</updated>
