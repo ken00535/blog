@@ -176,9 +176,9 @@
 &lt;p&gt;修改後，用 WireShark 再抓一次&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.kenwsc.com/img/posts/error-as-resource-grpc-error-handling/wireshark_grpc_response_3.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;看到 grpc-status-details-bin 冒出來了，後面是 base64 編碼過的內容，如果丟進 decode 的話，可以得到&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;invalid argumente
-8type.googleapis.com/google.rpc.BadRequest.FieldViolation)
-lostlost field that should have
+&lt;pre&gt;&lt;code&gt;invalid argument e
+8type.googleapis.com/google.rpc.BadRequest.FieldViolation)
+lost lost field that should have
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;可以看到詳細的錯誤資訊都在裡面。&lt;/p&gt;
 &lt;p&gt;用 Postman 呼叫 gRPC，也能看到同樣的錯誤訊息。&lt;/p&gt;
