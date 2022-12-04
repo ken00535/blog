@@ -4,7 +4,7 @@
       <a href="{{ post.url | url }}">{{ post.data.title | safe }}</a>
     </h2>
     <div class="post-description">
-      {{ post.templateContent | summary | safe }}
+      {{ post.data.description | safe }}
     </div>
     <div class="post-info">
       <div class="post-read-more">
