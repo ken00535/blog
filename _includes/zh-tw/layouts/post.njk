@@ -5,14 +5,17 @@ templateClass: tmpl-post
 
 {% block extraArticleHeader %}
    <aside class="w-full">
-      <div class="post-tags">
-      {% for tag in tags %}
-        {% if tag !== "posts" %}
-          {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-          <a href="{{ tagUrl | url }}" class="tag post-tag">{{ tag }}</a>
-        {% endif %}
-        
-      {% endfor %}
+      <div class="post-avatar">
+        <div class="post-avatar__time">
+          {{ date | readableDate }}
+          {% for tag in tags %}
+            {% if tag !== "posts" %}
+              {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+              <a href="{{ tagUrl | url }}" class="tag post-tag">{{ tag }}</a>
+            {% endif %}
+            
+          {% endfor %}
+        </div>
       </div>
    </aside>
 {% endblock %}
@@ -37,11 +40,11 @@ templateClass: tmpl-post
     {% endfor %}
   </div>
   <p style="font-weight: bold;">其他文章</p>
-  <ol>
+  <ul>
     {%- for entry in collections.posts | recommendation(title) | randomPick(5) | reverse %}
       <li><a href="{{ entry.url | url }}">{{ entry.data.title }}</a></li>
     {%- endfor %}
-  </ol>
+  </ul>
 </div>
 
 <p style="font-weight: bold;">評論</p>
