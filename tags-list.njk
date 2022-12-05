@@ -7,7 +7,10 @@ eleventyNavigation:
   order: 2
 ---
 
-{% for tag in collections.tagList %}
-  {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="tag-list__item">{{ tag }}</a>
-{% endfor %}
+{% set currentTag = 'Security' %}
+{% include "zh-tw/tags.njk" %}
+
+<div style="margin-top: 32px;">
+{% set postslist = collections['Security'] | reverse %}
+{% include "zh-tw/postslist.njk" %}
+</div>
