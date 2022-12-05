@@ -252,6 +252,5 @@ pi                 : ok=4    changed=1    unreachable=0    failed=0
 ## Reference
 
 - [《Ansible：建置與執行》](https://www.tenlong.com.tw/products/9789864768264)
-- [Ansible Documentation
-](https://docs.ansible.com/)
+- [Ansible Documentation](https://docs.ansible.com/)
 - [讓您安心執行 Ansible playbook 的小技巧（2）](https://medium.com/laraveldojo/%E8%AE%93%E6%82%A8%E5%AE%89%E5%BF%83%E5%9F%B7%E8%A1%8C-ansible-playbook-%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-2-856a60b19898?source=---------14------------------)
