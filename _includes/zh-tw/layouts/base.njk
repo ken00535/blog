@@ -19,7 +19,7 @@
     <meta property="og:title" content="{{ renderData.title or title or metadata.title | escape  }}">
     <meta name="twitter:title" content="{{ renderData.title or title or metadata.title | escape  }}">
     <meta name="twitter:card" content="summary_large_image">
-    {% set coverImage = image or '/img/favicon/favicon.png' %}
+    {% set coverImage = page.url | replace("posts", "img/posts") + 'cover.png' %}
     {% set desc = renderData.description or description %}
     {% set summaryDesc = content | summary | striptags %}
     {% if summaryDesc %}

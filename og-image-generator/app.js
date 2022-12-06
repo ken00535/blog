@@ -11,17 +11,16 @@ const getPath = name => path.join(__dirname, name)
 
 // check argv
 const post = process.argv[2]
-const lang = process.argv[3] || ""
 
 // npm run og-image -- "how-i-hacked-glints-and-your-resume"
 
 if (!post) {
-  console.error('Please input author and post, example: npm run og-image -- "xss-article"')
+  console.error('Please input post, example: npm run og-image -- "xss-article"')
   process.exit(1)
 }
 
 // get post and author info
-const postPath = path.join(__dirname, '../', lang, 'posts', post + '.md')
+const postPath = path.join(__dirname, '../', 'posts', post + '.md')
 console.log(`Path: ${postPath}`)
 
 let postMeta
@@ -75,7 +74,7 @@ async function main() {
     deviceScaleFactor: 2,
   });
 
-  await takeScreenshot(page, path.join(__dirname, "cover"))
+  await takeScreenshot(page, path.join(__dirname, '../', 'img', "posts", post, "cover"))
 
   await browser.close();
   console.log("Done, you can find image at: og-image-generator/cover.png")
