@@ -154,7 +154,7 @@ playbook/
       hello.py
 ```
 
-hello.py 是個 python 的程式碼，用來印出 “Hello, world”
+`hello.py` 是個 python 的程式碼，用來印出 “Hello, world”
 
 ```py
 print("Hello, world")
@@ -180,11 +180,11 @@ PLAY RECAP ********************************************************************
 pi                  : ok=3    changed=2    unreachable=0    failed=0
 ```
 
-Ansible 會先收集裝置上的資訊，然後依照 playbook 來執行 task，changed 表示裝置被實際變動，由結果可看到 Ansible 將 hello.py 複製到 RPi 上，並且執行 python script。
+Ansible 會先收集裝置上的資訊，然後依照 playbook 來執行 task，changed 表示裝置被實際變動，由結果可看到 Ansible 將 `hello.py` 複製到 RPi 上，並且執行 python script。
 
 ## Add Debug Information
 
-但是 hello.py 有印出 “Hello, world”，為什麼在執行結果沒看到呢？這是因為印出的資訊是在 RPi 上，如果要將輸出結果顯示到 Ansible 的結果中，可以修改 playbook 如下
+但是 `hello.py` 有印出 “Hello, world”，為什麼在執行結果沒看到呢？這是因為印出的資訊是在 RPi 上，如果要將輸出結果顯示到 Ansible 的結果中，可以修改 playbook 如下
 
 ```yaml
 - name: Update python script
@@ -243,7 +243,7 @@ PLAY RECAP ********************************************************************
 pi                 : ok=4    changed=1    unreachable=0    failed=0
 ```
 
-這次就可以看到 stdout 結果是 “Hello, world”，同時因為 hello.py 已經複製過了，第一個 task 狀態改為 ok，而非 changed。
+這次就可以看到 stdout 結果是 “Hello, world”，同時因為 `hello.py` 已經複製過了，第一個 task 狀態改為 ok，而非 changed。
 
 ## 小結
 

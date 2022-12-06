@@ -180,7 +180,7 @@ scrape_configs:
 
 RPi 的 CPU 使用率快樂抖動中。
 
-## Conclusion
+## 小結
 
 上張 Prometheus 的架構圖
 

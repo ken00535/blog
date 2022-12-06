@@ -53,7 +53,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 讓我們看一個簡單的例子
 
-```
+```bash
 commit 4030e040b6044de68b2750702a5b6065c887960c
 Author: kenwschen <ken*****@[gmail.com](mailto:ken00535@gmail.com)>
 Date:   Thu Nov 28 22:51:44 2019 +0800
@@ -194,7 +194,7 @@ sudo vi /usr/local/lib/node_modules/cz-customizable/questions.js
 
 而實際的 log 是
 
-```
+```bash
 commit 3cc8c9aa4a9084fb4b8faa651d98b5376f24e4d6 (HEAD -> master)
 Author: kenwschen <[kenxxxxx@gmail.com](mailto:ken00535@gmail.com)>
 Date:   Fri Nov 29 19:56:58 2019 +0800
@@ -204,7 +204,7 @@ feat(libhello): add hello file
 add a new file to test commitizen tool. hello is a lib that can say "hello"
 ```
 
-## Conclusion
+## 小結
 
 有時候程式寫一寫，會忘記升級自己的工具，很多時候團隊遇到的問題不是人的問題，而是工具的問題，我們應該要盡量 align 目標，用工具時時提醒出發點在哪。commit comment 原本是為了溝通而存在，而 Commitizen 可以幫我們更好地去做這件事。
 
