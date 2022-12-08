@@ -15,13 +15,13 @@ layout: zh-tw/layouts/post.njk
 
 既然是用 Gmail，就要先把 Gmail 設定好。因為安全性的因素，Gmail 會管控部分應用程式，不讓它們登入，很不幸的，我們自己寫的 Python Script 就是所謂的低安全性應用程式。因此在測試前請先到 Google [設定頁面](https://myaccount.google.com/lesssecureapps)中開啟「允許低安全性應用程式」，測試完後再改回去。
 
-![](/img/posts/send-gmail-with-python/gmail-1.png)
+![](/img/posts/2019/(.*)/gmail-1.png)
 
 ## Create a SSL Socket
 
 在寫 Code 前，要先知道 Server 的位置跟 Port，參考 Gmail 頁面的說明
 
-![](/img/posts/send-gmail-with-python/gmail-2.png)
+![](/img/posts/2019/(.*)/gmail-2.png)
 
 知道 SMTP 的 Server 是 smtp.gmail.com，SSL port 是 465。
 
@@ -170,7 +170,7 @@ if recv1[:3] != '221':
 
 打開 Gmail，看看成果
 
-![](/img/posts/send-gmail-with-python/gmail-3.png)
+![](/img/posts/2019/(.*)/gmail-3.png)
 
 ## 小結
 

@@ -23,7 +23,7 @@ sudo apt-get install ansible
 
 同時，使用一台 Raspberry Pi Model B 來當成終端裝置，沒有 RPi 也可以用 VirtualBox + Vagrant 搭建虛擬機來使用。
 
-![](/img/posts/use-ansible-to-update-end-devices/rpi3-1.webp)
+![](/img/posts/2019/(.*)/rpi3-1.webp)
 
 因為 Ansible 是使用 SSH 進行遠端操作，記得要打開 RPi 上的 SSH
 
@@ -31,7 +31,7 @@ sudo apt-get install ansible
 sudo raspi-config
 ```
 
-![](/img/posts/use-ansible-to-update-end-devices/rpi3-2.webp)
+![](/img/posts/2019/(.*)/rpi3-2.webp)
 
 選擇 Interfacing Options 後，打開 P2 SSH。
 

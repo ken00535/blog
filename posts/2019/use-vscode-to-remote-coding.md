@@ -25,7 +25,7 @@ docker 會自動去 Docker Hub 將 image 抓下來設置，完成。
 
 好像有點簡單，用瀏覽器來看一下成果
 
-![](/img/posts/use-vscode-to-remote-coding/vscode-1.webp)
+![](/img/posts/2019/(.*)/vscode-1.webp)
 
 看起來跟本機端的 VSCode 幾乎完全一樣啊！
 
@@ -66,7 +66,7 @@ info      - To disable use `--auth none`
 info    - Not serving HTTPS
 ```
 
-![](/img/posts/use-vscode-to-remote-coding/vscode-2.webp)
+![](/img/posts/2019/(.*)/vscode-2.webp)
 
 由瀏覽器可以看到登入頁面，輸入隨機產生的密碼後登入
 

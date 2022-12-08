@@ -16,13 +16,13 @@ Thin Client 的概念說來單純，我們可以將所有能連上網路的介�
 
 既然運算資源放在雲端，首先要申請一個雲端帳戶，這邊以 GCP 的免費方案為例，首先點選 GCP 的免費試用
 
-![](/img/posts/coding-by-your-smartphone/gcp-1.webp)
+![](/img/posts/2019/(.*)/gcp-1.webp)
 
 GCP 的免費方案提供 $300 刀的額度，還有 12 個月的使用時間，可以使用 GCP 上所有服務，如果是小型或低成本的運算，甚至不用動到 $300 的費用。
 
 選擇國家/地區後，按[繼續]進入第二頁
 
-![](/img/posts/coding-by-your-smartphone/gcp-2.webp)
+![](/img/posts/2019/(.*)/gcp-2.webp)
 
 第二頁要填入個人資訊，還需要一張信用卡卡號。依照 Google 的說法，信用卡是為了驗證身分。要注意 GCP 不支援 JCB，請用 Visa/Master Card 來申請。
 
@@ -30,25 +30,25 @@ GCP 的免費方案提供 $300 刀的額度，還有 12 個月的使用時間，
 
 進入 GCP 首頁後，可以先創建一個新的 Project，來放置要測試的東西，點選 Google Cloud Platform 旁的 Project 名稱，再點選跳出視窗右上角的 New Project
 
-![](/img/posts/coding-by-your-smartphone/gcp-3.webp)
+![](/img/posts/2019/(.*)/gcp-3.webp)
 
 填入 Project name 跟要放置的 Folder，例如 Linux VM，完成 Project 的建置。
 
-![](/img/posts/coding-by-your-smartphone/gcp-4.webp)
+![](/img/posts/2019/(.*)/gcp-4.webp)
 
 ## Create VM instance
 
 有了 Project 後，可以在裡面創建需要的雲端服務，因為主要目的是驗證 Thin Client 是否可行，選擇創建一個 VM 實例來進行登入。要創建 VM 實例可以點選 Menu 中的 Compute Engine > VM Instances，選擇 Create
 
-![](/img/posts/coding-by-your-smartphone/gcp-5.webp)
+![](/img/posts/2019/(.*)/gcp-5.webp)
 
 Create 的選項有很多，參照 GCP 的免費方案說明，使用 Region 為 us-central1 (Iowa)，Machine Type 為 f1-micro
 
-![](/img/posts/coding-by-your-smartphone/gcp-6.webp)
+![](/img/posts/2019/(.*)/gcp-6.webp)
 
 Boot Disk 看個人習慣，我平常用的環境是 Ubuntu 18.04 LTS，這邊選同樣的，如果有習慣 Debian 或其他 Distribution 的人，也可以自行選擇
 
-![](/img/posts/coding-by-your-smartphone/gcp-7.webp)
+![](/img/posts/2019/(.*)/gcp-7.webp)
 
 點選[Create]，完成 VM 創建。
 
@@ -58,7 +58,7 @@ Boot Disk 看個人習慣，我平常用的環境是 Ubuntu 18.04 LTS，這邊�
 
 有 Public Key 後，要將它放到雲端，方便以後登入。選擇 Compute Engine 中的 Metadata，點選 SSH Keys，可以管理金鑰。點選 Add SSH keys 來加入自己的 Public Key
 
-![](/img/posts/coding-by-your-smartphone/gcp-8.webp)
+![](/img/posts/2019/(.*)/gcp-8.webp)
 
 加入後回到 VM instances，查看對應的 External IP，使用 SSH Client 輸入 user@address，登入 VM instance，記得 user 是要 key 對應的 user，address 是要 External IP。驗證看看能否登入。
 
@@ -68,7 +68,7 @@ Boot Disk 看個人習慣，我平常用的環境是 Ubuntu 18.04 LTS，這邊�
 
 最後放張完成圖，紀念一下。
 
-![](/img/posts/coding-by-your-smartphone/gcp-9.webp)
+![](/img/posts/2019/(.*)/gcp-9.webp)
 
 ## Reference
 

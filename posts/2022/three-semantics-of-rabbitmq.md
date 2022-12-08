@@ -67,11 +67,11 @@ func consumeMessage(d rabbitmq.Delivery) rabbitmq.Action {
 
 用 WireShark 抓封包的話，會看到 Basic.Publish 發佈了一次的消息
 
-![](/img/posts/three-semantics-of-rabbitmq/wireshark-rabbitmq-1.webp)
+![](/img/posts/2022/(.*)/wireshark-rabbitmq-1.webp)
 
 消費端也用 Basic.Consume 進行了消費
 
-![](/img/posts/three-semantics-of-rabbitmq/wireshark-rabbitmq-2.webp)
+![](/img/posts/2022/(.*)/wireshark-rabbitmq-2.webp)
 
 ## At least once
 
@@ -81,7 +81,7 @@ func consumeMessage(d rabbitmq.Delivery) rabbitmq.Action {
 
 同樣先從生產端來看。要重試，就需要先知道原本的消息是有否正確傳遞。這裡可以用 AMQP 的 Confirm 機制 來實現，時序圖上是
 
-![](/img/posts/three-semantics-of-rabbitmq/pub-and-sub.webp)
+![](/img/posts/2022/(.*)/pub-and-sub.webp)
 
 在建立 channel 時，聲明這個 channel 需要 confirm。Broker 收到後會回 Confirm.Select-Ok，表示同意生產者將 channel 設為 confirm。之後，每次生產者發佈消息後，都會收到 Ack，如果因為 RabbitMQ 自身的問題導致消息丟失，則會回傳 Nack 給生產者。
 
@@ -147,7 +147,7 @@ err = producer.Publish(
 
 來看 WireShark 抓到的封包
 
-![](/img/posts/three-semantics-of-rabbitmq/wireshark-rabbitmq-3.webp)
+![](/img/posts/2022/(.*)/wireshark-rabbitmq-3.webp)
 
 可以看到 Header 的 Delivery-Mode 被設為 2，指的就是有持久化消息。
 
@@ -192,7 +192,7 @@ func consumeMessage(d rabbitmq.Delivery) rabbitmq.Action {
 
 用 WireShark 也能看到 MessageID
 
-![](/img/posts/three-semantics-of-rabbitmq/wireshark-rabbitmq-4.webp)
+![](/img/posts/2022/(.*)/wireshark-rabbitmq-4.webp)
 
 因為我們是在業務層面保證「準確一次」，實作方式就會跟系統相關，像是引入集中式緩存（Redis）會增加系統複雜度；而緩存的空間與失效期間也需要設計，這就不是單單調整參數就好，而是需要視具體運作的狀況來確定了。
 

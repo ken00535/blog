@@ -49,21 +49,21 @@ RAW host disk access VMDK file /home/ken/vmdk/windows_10.vmdk created successful
 
 再來，開啟 VirtualBox，用剛剛建好的 vmdk 檔來開機
 
-![](/img/posts/using-physical-disc-with-virtualbox/virtualbox-1.webp)
+![](/img/posts/2019/(.*)/virtualbox-1.webp)
 
 這邊要注意，雖然我們的系統安裝在 SSD，使用的是 NVMe，但 VirtualBox 的 NVMe 似乎有問題，因此這邊選擇用 SATA
 
-![](/img/posts/using-physical-disc-with-virtualbox/virtualbox-2.webp)
+![](/img/posts/2019/(.*)/virtualbox-2.webp)
 
 前面看到 nvme0n1 開頭是 EFI，因此記得要 Enable EFI
 
-![](/img/posts/using-physical-disc-with-virtualbox/virtualbox-3.webp)
+![](/img/posts/2019/(.*)/virtualbox-3.webp)
 
 ## 啟動虛擬機
 
 設定都完成後，只要開啟 Virtual Machine，應該能看到 GRUB 的畫面，選擇 Windows Boot Manager，進入 Windows，完工。
 
-![](/img/posts/using-physical-disc-with-virtualbox/virtualbox-4.webp)
+![](/img/posts/2019/(.*)/virtualbox-4.webp)
 
 ## 小結
 
