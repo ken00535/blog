@@ -8,7 +8,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/setup-openwrt-on-virtualbox/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/setup-openwrt-on-virtualbox/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-02-03T00:00:00.000Z</lastmod>
@@ -22,7 +22,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/using-physical-disc-with-virtualbox/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/using-physical-disc-with-virtualbox/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-06-10T00:00:00.000Z</lastmod>
@@ -36,7 +36,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/visualize-your-redmine-data/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/visualize-your-redmine-data/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-08-31T00:00:00.000Z</lastmod>
@@ -50,7 +50,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/coding-by-your-smartphone/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/coding-by-your-smartphone/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-10-11T00:00:00.000Z</lastmod>
@@ -64,7 +64,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/use-vscode-to-remote-coding/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/use-vscode-to-remote-coding/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-11-17T00:00:00.000Z</lastmod>
@@ -78,7 +78,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/use-ansible-to-update-end-devices/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/use-ansible-to-update-end-devices/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-11-26T00:00:00.000Z</lastmod>
@@ -92,7 +92,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/use-prometheus-to-monitor-end-devices/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/use-prometheus-to-monitor-end-devices/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-11-28T00:00:00.000Z</lastmod>
@@ -106,7 +106,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/use-commitizen-to-write-graceful-git-comment/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/use-commitizen-to-write-graceful-git-comment/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-11-29T00:00:00.000Z</lastmod>
@@ -120,7 +120,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/use-grafana-to-show-prometheus-data/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/use-grafana-to-show-prometheus-data/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-11-30T00:00:00.000Z</lastmod>
@@ -134,7 +134,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/send-gmail-with-python/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/send-gmail-with-python/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-12-06T00:00:00.000Z</lastmod>
@@ -148,7 +148,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/use-feedly-to-subscribe-facebooks-group/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/use-feedly-to-subscribe-facebooks-group/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-12-08T00:00:00.000Z</lastmod>
@@ -162,7 +162,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/use-codelite-to-program-c/</loc>
+      <loc>https://blog.kenwsc.com/posts/2019/use-codelite-to-program-c/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2019-12-30T00:00:00.000Z</lastmod>
@@ -176,7 +176,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/use-conan-to-manage-c-package/</loc>
+      <loc>https://blog.kenwsc.com/posts/2020/use-conan-to-manage-c-package/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2020-01-18T00:00:00.000Z</lastmod>
@@ -190,7 +190,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/error-as-resource-grpc-error-handling/</loc>
+      <loc>https://blog.kenwsc.com/posts/2022/error-as-resource-grpc-error-handling/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2022-10-07T00:00:00.000Z</lastmod>
@@ -204,7 +204,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/three-semantics-of-rabbitmq/</loc>
+      <loc>https://blog.kenwsc.com/posts/2022/three-semantics-of-rabbitmq/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2022-10-22T00:00:00.000Z</lastmod>
@@ -218,7 +218,7 @@
 
     
     <url>
-      <loc>https://blog.kenwsc.com/posts/concurrency-of-go-error-handling/</loc>
+      <loc>https://blog.kenwsc.com/posts/2022/concurrency-of-go-error-handling/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
       <lastmod>2022-12-07T00:00:00.000Z</lastmod>
@@ -235,7 +235,7 @@
       <loc>https://blog.kenwsc.com/about/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
-      <lastmod>2022-12-08T04:48:37.265Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.656Z</lastmod>
     </url>
   
   
@@ -249,7 +249,7 @@
       <loc>https://blog.kenwsc.com/archive/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
-      <lastmod>2022-12-08T04:48:37.265Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.656Z</lastmod>
     </url>
   
   
@@ -265,7 +265,7 @@
       <loc>https://blog.kenwsc.com/</loc>
       <changefreq>daily</changefreq>
       <priority>1</priority>
-      <lastmod>2022-12-08T04:48:37.301Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.696Z</lastmod>
     </url>
   
   
@@ -279,7 +279,7 @@
       <loc>https://blog.kenwsc.com/page-list/</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -293,7 +293,7 @@
       <loc>https://blog.kenwsc.com/robots.txt</loc>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -307,7 +307,7 @@
       <loc>https://blog.kenwsc.com/tags/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -321,35 +321,7 @@
       <loc>https://blog.kenwsc.com/tags/gcp/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
-    </url>
-  
-  
-  
-  
-  
-  
-
-  
-    <url>
-      <loc>https://blog.kenwsc.com/tags/go/</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
-    </url>
-  
-  
-  
-  
-  
-  
-
-  
-    <url>
-      <loc>https://blog.kenwsc.com/tags/concurrency/</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -363,7 +335,7 @@
       <loc>https://blog.kenwsc.com/tags/smtp/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -377,7 +349,7 @@
       <loc>https://blog.kenwsc.com/tags/python/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -391,7 +363,7 @@
       <loc>https://blog.kenwsc.com/tags/vm/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -405,35 +377,7 @@
       <loc>https://blog.kenwsc.com/tags/openwrt/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
-    </url>
-  
-  
-  
-  
-  
-  
-
-  
-    <url>
-      <loc>https://blog.kenwsc.com/tags/rabbitmq/</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
-    </url>
-  
-  
-  
-  
-  
-  
-
-  
-    <url>
-      <loc>https://blog.kenwsc.com/tags/message-queue/</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -447,7 +391,7 @@
       <loc>https://blog.kenwsc.com/tags/cloud-native/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -461,21 +405,7 @@
       <loc>https://blog.kenwsc.com/tags/ansible/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
-    </url>
-  
-  
-  
-  
-  
-  
-
-  
-    <url>
-      <loc>https://blog.kenwsc.com/tags/git/</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -489,7 +419,7 @@
       <loc>https://blog.kenwsc.com/tags/c-c/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -500,10 +430,10 @@
 
   
     <url>
-      <loc>https://blog.kenwsc.com/tags/conan/</loc>
+      <loc>https://blog.kenwsc.com/tags/git/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -517,7 +447,7 @@
       <loc>https://blog.kenwsc.com/tags/rss/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -531,7 +461,7 @@
       <loc>https://blog.kenwsc.com/tags/observability/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -545,7 +475,7 @@
       <loc>https://blog.kenwsc.com/tags/prometheus/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -559,7 +489,7 @@
       <loc>https://blog.kenwsc.com/tags/vscode/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
   
@@ -573,7 +503,77 @@
       <loc>https://blog.kenwsc.com/tags/redmine/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.2</priority>
-      <lastmod>2022-12-08T04:48:37.305Z</lastmod>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
+    </url>
+  
+  
+  
+  
+  
+  
+
+  
+    <url>
+      <loc>https://blog.kenwsc.com/tags/conan/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
+    </url>
+  
+  
+  
+  
+  
+  
+
+  
+    <url>
+      <loc>https://blog.kenwsc.com/tags/go/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
+    </url>
+  
+  
+  
+  
+  
+  
+
+  
+    <url>
+      <loc>https://blog.kenwsc.com/tags/concurrency/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
+    </url>
+  
+  
+  
+  
+  
+  
+
+  
+    <url>
+      <loc>https://blog.kenwsc.com/tags/rabbitmq/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
+    </url>
+  
+  
+  
+  
+  
+  
+
+  
+    <url>
+      <loc>https://blog.kenwsc.com/tags/message-queue/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
+      <lastmod>2022-12-08T09:05:37.700Z</lastmod>
     </url>
   
 </urlset>

@@ -14,9 +14,9 @@
 	
 	<entry>
 		<title>在 VirtualBox 上建置 Openwrt</title>
-		<link href="https://blog.kenwsc.com/posts/setup-openwrt-on-virtualbox/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/setup-openwrt-on-virtualbox/"/>
 		<updated>2019-02-03T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/setup-openwrt-on-virtualbox/</id>
+		<id>https://blog.kenwsc.com/posts/2019/setup-openwrt-on-virtualbox/</id>
 		<content type="html">
 		  &lt;p&gt;現在工作會用到 Openwrt 當開發平台，但用起來一直卡卡的，想找時間從頭操作一次，看能不能深入理解系統的運作，說起來工作的重點就是不斷追求 balance，既能符合商業需求，又能持續成長。趁著年假有空，來玩玩看 Openwrt 有什麼特色。&lt;/p&gt;
 &lt;p&gt;首先是下載 Openwrt 並編譯，現在的 Openwrt 已經用 git 做版控，可以用 git clone 來放到自己的開發目錄&lt;/p&gt;
@@ -48,9 +48,9 @@
 	
 	<entry>
 		<title>用 VirtualBox 開啟實體硬碟中的 Windows</title>
-		<link href="https://blog.kenwsc.com/posts/using-physical-disc-with-virtualbox/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/using-physical-disc-with-virtualbox/"/>
 		<updated>2019-06-10T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/using-physical-disc-with-virtualbox/</id>
+		<id>https://blog.kenwsc.com/posts/2019/using-physical-disc-with-virtualbox/</id>
 		<content type="html">
 		  &lt;p&gt;如果用 Linux 當開發環境，常常會碰到一個問題：因為一般企業使用的管理系統沒有 Linux 版本，導致有些操作必須使用 Windows 來完成。對於大部分的應用來說，在 VirtualBox 內安裝 Windows 可能就能解決，問題是，通常 VirtualBox 的 Windows 都是由工程師自行安裝，不是正式授權；再來，在 VirtualBox 內安裝 Windows，意味加上原來預設的 Windows，硬碟內要有兩套 Windows，這真的讓人很難接受，一套已經很佔空間了，居然還要兩套？&lt;/p&gt;
 &lt;p&gt;於是我有個想法，要是 VirtualBox 可以用實體空間來開機的話，就能直接在 VirtualBox 執行原本配置的系統，如此一來，可以用 IT 已經安裝好的授權軟體不說，也省掉了後續資料交換的麻煩。Google 後發現還真的有這種應用，當然馬上試試看。&lt;/p&gt;
@@ -84,9 +84,9 @@
 	
 	<entry>
 		<title>掌握 Redmine 的活動指標：繪製熱度圖</title>
-		<link href="https://blog.kenwsc.com/posts/visualize-your-redmine-data/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/visualize-your-redmine-data/"/>
 		<updated>2019-08-31T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/visualize-your-redmine-data/</id>
+		<id>https://blog.kenwsc.com/posts/2019/visualize-your-redmine-data/</id>
 		<content type="html">
 		  &lt;p&gt;我們平常使用 Redmine 來管理專案，當需要進行 Review 或討論如何改善時，常常需要基於 Redmine 的數據。由這些數據分析，也能得知團隊執行狀況是否順利。但是 Redmine 本身並沒有整合 Dashboard 的功能，因此需要透過 RESTful API 來取得專案資料，再使用第三方軟體繪製成圖表。&lt;/p&gt;
 &lt;h2 id=&quot;%E5%AE%89%E8%A3%9D-python-redmine&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#%E5%AE%89%E8%A3%9D-python-redmine&quot;&gt;#&lt;/a&gt; 安裝 python-redmine&lt;/h2&gt;
@@ -138,9 +138,9 @@
 	
 	<entry>
 		<title>全世界都是你的工作室：GCP 的雲端開發環境</title>
-		<link href="https://blog.kenwsc.com/posts/coding-by-your-smartphone/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/coding-by-your-smartphone/"/>
 		<updated>2019-10-11T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/coding-by-your-smartphone/</id>
+		<id>https://blog.kenwsc.com/posts/2019/coding-by-your-smartphone/</id>
 		<content type="html">
 		  &lt;p&gt;最近看到 Heron 的 Medium 在討論使用 iPad 來開發程式，深深被 Thin Client 給感動了。如果能從硬體裝置中解放，不用開發程式前還需要花費大把時間精力來架設環境，那我們就能更快驗證，更快學習，更快迭代，把時間花在重要而有價值的事上。&lt;/p&gt;
 &lt;p&gt;Thin Client 的概念說來單純，我們可以將所有能連上網路的介面都可以當成終端，在傳統開發環境中，終端跟運算是放在同一台機器上，輸入完成後，使用機器的資源來進行運算，像是編譯程式、執行與提供服務；但自從有了雲端後，可以將這類運算都交由雲端處理，只要有個合用的終端介面能輸入與呈現資訊，就能得到運算結果。&lt;/p&gt;
@@ -184,9 +184,9 @@
 	
 	<entry>
 		<title>遠端開發環境架設：Web 版 VSCode</title>
-		<link href="https://blog.kenwsc.com/posts/use-vscode-to-remote-coding/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/use-vscode-to-remote-coding/"/>
 		<updated>2019-11-17T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/use-vscode-to-remote-coding/</id>
+		<id>https://blog.kenwsc.com/posts/2019/use-vscode-to-remote-coding/</id>
 		<content type="html">
 		  &lt;p&gt;手邊一些開發有使用 Flask，因為 Flask 是架在遠端 Server 上，如果本地開發後還要部署到遠端，等於中間多了一個步驟，切來切去很麻煩，所以在想，有沒有機會直接在遠端進行開發？Google 後發現有個 code-server，能用 VSCode 進行 Remote Coding，所以還等什麼呢，來試試看吧。&lt;/p&gt;
 &lt;h2 id=&quot;use-docker-to-deploy-code-server&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#use-docker-to-deploy-code-server&quot;&gt;#&lt;/a&gt; Use Docker to Deploy code-server&lt;/h2&gt;
@@ -239,9 +239,9 @@ code-server
 	
 	<entry>
 		<title>配置即代碼：Ansible 入門</title>
-		<link href="https://blog.kenwsc.com/posts/use-ansible-to-update-end-devices/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/use-ansible-to-update-end-devices/"/>
 		<updated>2019-11-26T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/use-ansible-to-update-end-devices/</id>
+		<id>https://blog.kenwsc.com/posts/2019/use-ansible-to-update-end-devices/</id>
 		<content type="html">
 		  &lt;p&gt;之前負責產品研發時，常常需要因應客戶需求，更新終端裝置上的應用程式。因為終端裝置在廠區可能一次就是幾十幾百台，如果用手動更新大概當天就不用做事了。Ansible 這類組態管理(Configuration Management)軟體就是為此而生。相對於同類軟體，Ansible 的系統需求單純，只要 Client 端有安裝 Python 即可，很適合資源受限的嵌入式系統。&lt;/p&gt;
 &lt;p&gt;這篇會用 Ansible 來模擬簡單的 Python 應用程式更新，看看它如何處理 Deployment 的問題。&lt;/p&gt;
@@ -327,9 +327,9 @@ code-server
 	
 	<entry>
 		<title>監控節點的度量指標：Prometheus 入門</title>
-		<link href="https://blog.kenwsc.com/posts/use-prometheus-to-monitor-end-devices/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/use-prometheus-to-monitor-end-devices/"/>
 		<updated>2019-11-28T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/use-prometheus-to-monitor-end-devices/</id>
+		<id>https://blog.kenwsc.com/posts/2019/use-prometheus-to-monitor-end-devices/</id>
 		<content type="html">
 		  &lt;p&gt;Prometheus 是一套開源的監控系統，常常搭配雲端，監控服務運行狀態。今年 COSCUP 有一位 Speaker 將它用於 End-Devices 的監控，看起來非常有意思。透過這套系統，我們能將各處節點的資訊整合於統一的平台，讓 Operation 監控服務，避免服務中斷導致價值鍊中斷，同時這些數據也能提供給 Developer，作為後續改善的依據。&lt;/p&gt;
 &lt;p&gt;Prometheus 的基本原理是用 HTTP 定期抓取監控端（target）的資料，target 上會有 exporter，將符合 Prometheus 定義的資訊輸出到 HTTP API，Prometheus 拉取後就能將它顯示於 Dashboard。&lt;/p&gt;
@@ -395,9 +395,9 @@ code-server
 	
 	<entry>
 		<title>輕鬆上手約定式提交：Commitizen 初體驗</title>
-		<link href="https://blog.kenwsc.com/posts/use-commitizen-to-write-graceful-git-comment/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/use-commitizen-to-write-graceful-git-comment/"/>
 		<updated>2019-11-29T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/use-commitizen-to-write-graceful-git-comment/</id>
+		<id>https://blog.kenwsc.com/posts/2019/use-commitizen-to-write-graceful-git-comment/</id>
 		<content type="html">
 		  &lt;p&gt;最近參加 &lt;a href=&quot;https://www.facebook.com/DevOpsTaiwan/?__xts__%5B0%5D=68.ARDEgwToQAGuv9hG3_bq6XWyLfuKwC8UtMvzV5WLsG4UpdFV7OX5T7j3D5mDFIFc-g4fw6AmpuWS6Q2lXlGOX63ewQsP-Zr28ToevHy_ys6mbYIQw_XhaPLa9vdayvCkwV0GiPgJ0ex-m3cPNb0BEO4O-psJC4pcRo4QwsG10-DYNJW9TVMZp6fUQk7vJwiYvSYwwKUEfySzN7acg1qnTyTqq9gfhp6PH4T_wyR_qcA5sjwkmHklTSZs5tYXRJv_hS7p72UmGZc9AGktwZ3HKiuCxdmc3fVK2l9lRASxzyPAC4qWVPEYRF7eScGeOprzdFkfnkbmkoCKqappUDmFhHrXq5ONVNSXCXC_ltxFT-TWwPyFeLJk5o0Cqe0&amp;amp;__xts__%5B1%5D=68.ARAcpv3SzZ6EJSKKfcow3owDtiyMig-u6PbVyaWDvjd8xNckpS8mKdrSgY8LjHquhuMgtjC9T36r5IdZkW79QMhDBVs-dFX-ejRugNm4slqIlj7Z0NFmlSotqiDtbmRivf8CPNkFGHvms-BdA1925rc4Qss3OXhWVaAF53i2MtAqTdC4NwOdN0RbjRT2loQHnkLFnSqk-QU-YDNG&amp;amp;__tn__=K-R&amp;amp;eid=ARAGF0O3M8GMJQ8AvevMsEgZ1JRpx_HAz-w9szWyv3wn99ZFociIgks68rbjUVVQoBUFPAtPcnDLvKR9&amp;amp;fref=mentions&quot;&gt;DevOps Meetup&lt;/a&gt; 的活動，Speaker 提到團隊使用 Commitizen 這套工具來統一提交訊息的風格，當場就有種醍醐灌頂的感覺。我們團隊前陣子才 Suffer 在 Commit Style 分歧，知識管理效率低落，有時只有 commit 本人能看懂，而使用共同模板又太浪費時間，跟 Git 鼓勵 commit 的精神背道而馳。聽完後，真的是相見恨晚，完全命中我的痛點。&lt;/p&gt;
 &lt;p&gt;Commitizen 是由 AngularJS 的規範衍伸而來，各團隊可以依照需求自行調整，我們 Step by Step 來看看 Commitizen 的效果如何。&lt;/p&gt;
@@ -462,9 +462,9 @@ code-server
 	
 	<entry>
 		<title>監控節點的度量指標：Grafana 串接 Prometheus</title>
-		<link href="https://blog.kenwsc.com/posts/use-grafana-to-show-prometheus-data/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/use-grafana-to-show-prometheus-data/"/>
 		<updated>2019-11-30T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/use-grafana-to-show-prometheus-data/</id>
+		<id>https://blog.kenwsc.com/posts/2019/use-grafana-to-show-prometheus-data/</id>
 		<content type="html">
 		  &lt;p&gt;在&lt;a href=&quot;https://blog.kenwsc.com/posts/use-prometheus-to-monitor-end-devices/&quot;&gt;前面的討論&lt;/a&gt;中，我們可以用 Prometheus 去監控 End Devices，但 Prometheus 內建的 Dashboard 只是為了開發用，缺乏許多進階功能，在真正需要資料視覺化時並不方便。因此 Prometheus 通常會跟 Grafana 搭配使用。&lt;/p&gt;
 &lt;p&gt;Grafana 是一套開源的 Dashboard 平台，之前開發產品時，有用過 Grafana 來呈現 Database 中的資料。其實用起來還是偏 Monitor Host，並不適合用在 Domain Data Visualization，但在開發初期，我們可以先借用 Grafana 的呈現能力來確認方向（反正開發初期規格會一直修改，重要的是工具能否快速調整，實不實用倒是其次）。&lt;/p&gt;
@@ -510,9 +510,9 @@ code-server
 	
 	<entry>
 		<title>從零開始的 SMTP：以 Python 為例</title>
-		<link href="https://blog.kenwsc.com/posts/send-gmail-with-python/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/send-gmail-with-python/"/>
 		<updated>2019-12-06T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/send-gmail-with-python/</id>
+		<id>https://blog.kenwsc.com/posts/2019/send-gmail-with-python/</id>
 		<content type="html">
 		  &lt;p&gt;這陣子在重溫 SMTP，想說拿 Gmail 來測試，看看能不能從底層刻出一個簡單的 SMTP Client。沒有其他目的，本文會使用 Python 當範例，一步步實現 SMTP 協議。&lt;/p&gt;
 &lt;h2 id=&quot;set-gmail&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#set-gmail&quot;&gt;#&lt;/a&gt; Set Gmail&lt;/h2&gt;
@@ -567,9 +567,9 @@ code-server
 	
 	<entry>
 		<title>訂閱 Facebook Group 的訊息：自建 RSS 伺服器</title>
-		<link href="https://blog.kenwsc.com/posts/use-feedly-to-subscribe-facebooks-group/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/use-feedly-to-subscribe-facebooks-group/"/>
 		<updated>2019-12-08T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/use-feedly-to-subscribe-facebooks-group/</id>
+		<id>https://blog.kenwsc.com/posts/2019/use-feedly-to-subscribe-facebooks-group/</id>
 		<content type="html">
 		  &lt;p&gt;feedly 是一款 Web RSS 訂閱服務，自從 Google Reader 2013 年停止服務後，我就一直使用它，但隨著社群媒體像 Facebook 或 Twitter 流行，訊息的樣貌也改變很多，最痛苦的就是在 Facebook 跟人互動，結果這些訊息都要透過 Facebook 動態來 Follow，等同於變相洗版，何況 Facebook 有自己的演算法，會篩掉它認為你沒興趣的訊息。&lt;/p&gt;
 &lt;p&gt;這幾天被 Facebook 洗版洗到受不了，外加漏掉一則重要訊息，終於忍無可忍決定找一個新的訂閱方式，但偏偏 Facebook 本身不提供 RSS 訂閱服務，只好土法煉鋼，自己想辦法。&lt;/p&gt;
@@ -650,9 +650,9 @@ code-server
 	
 	<entry>
 		<title>C++ 開發環境架設：使用 CodeLite</title>
-		<link href="https://blog.kenwsc.com/posts/use-codelite-to-program-c/"/>
+		<link href="https://blog.kenwsc.com/posts/2019/use-codelite-to-program-c/"/>
 		<updated>2019-12-30T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/use-codelite-to-program-c/</id>
+		<id>https://blog.kenwsc.com/posts/2019/use-codelite-to-program-c/</id>
 		<content type="html">
 		  &lt;p&gt;很久沒寫 C++ 了，上次是一年多前的事，當時為了在專案中使用 TDD 開發，套用 CppUTest 當 Unit Test Framework，而這套 Framework 就是用 C++ 寫的。最近工作上又需要用到 C++ 當底層資源，環境重架之餘，順手紀錄一下歷程。&lt;/p&gt;
 &lt;p&gt;原本的開發環境是 Windows 7 + uVision，使用 C 來開發 MCU。為了導入 TDD，需要在 Local 端有編譯執行的能力，考量到資源開放性，選擇用 cygwin 來執行 GNU，同時選擇當時資源豐富的 VSCode 做為編輯器。如果現在重選的話，可能會直接使用 Ubuntu 的 GNU，搭配 STM32CubeMX 自動生成 Makefile 來編譯，不論是自由度還是效能都較好，而且沒有後面 cygwin 一系列踩坑問題，But，人生就是這個 But，當時我不知道 cygwin 有這麼多坑。&lt;/p&gt;
@@ -716,9 +716,9 @@ code-server
 	
 	<entry>
 		<title>Conan：C/C++ 的套件管理工具</title>
-		<link href="https://blog.kenwsc.com/posts/use-conan-to-manage-c-package/"/>
+		<link href="https://blog.kenwsc.com/posts/2020/use-conan-to-manage-c-package/"/>
 		<updated>2020-01-18T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/use-conan-to-manage-c-package/</id>
+		<id>https://blog.kenwsc.com/posts/2020/use-conan-to-manage-c-package/</id>
 		<content type="html">
 		  &lt;p&gt;開發 C++ 程式時，套件管理會是個困擾開發者的問題，C++ 不像 Python 有 pip；node.js 有 npm；lua 有 rock；C# 有 Nuget。它就只是沒有。沒有套件管理，當不同開發環境的使用者要開發程式時，不僅需要手動將相關的檔案塞進 repository 中，還會遇到相容性的問題，例如小明使用 paho-c 1.3.0 開發，開發到一半時，另一位開發者小華引用了小明放在 repo 中 include 資料夾下的 header file，卻使用了自己的 1.3.1 shared library，這使得兩個人的版本不相容，要花很多時間除錯。&lt;/p&gt;
 &lt;p&gt;此外，當需要更新 repo 中的第三方套件版本時，需要手動將檔案放到 include 跟 libs 的資料夾，你引用多少套套件，你就要塞多少檔案進去；而跨平台的問題也是，Win32 可能要一份，Win64 要一份，Release 跟 Debug 的 Libs 各要一份，Linux 跟 Mac 再各要一份，最後 x86、arm、mips 再各要一份，自行排列組合一下就知道這個更新的痛苦了。為什麼我知道呢？因為我就是那個被困擾的人。&lt;/p&gt;
@@ -797,9 +797,9 @@ code-server
 	
 	<entry>
 		<title>讓錯誤成為資源：gRPC 的錯誤處理模型</title>
-		<link href="https://blog.kenwsc.com/posts/error-as-resource-grpc-error-handling/"/>
+		<link href="https://blog.kenwsc.com/posts/2022/error-as-resource-grpc-error-handling/"/>
 		<updated>2022-10-07T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/error-as-resource-grpc-error-handling/</id>
+		<id>https://blog.kenwsc.com/posts/2022/error-as-resource-grpc-error-handling/</id>
 		<content type="html">
 		  &lt;p&gt;錯誤處理是所有 RPC 服務都要具備的設計，但是怎樣的錯誤處理模型，算是好的模型呢？從字面上來看，錯誤處理可以分解成「錯誤」跟「處理」，如果用 RESTful 的觀點，將錯誤當成是 Resource，一個好的模型應該要能匹配不同場景的 Resource，並根據場景需求來處理這些 Resource。&lt;/p&gt;
 &lt;h2 id=&quot;%E9%8C%AF%E8%AA%A4%E6%A8%A1%E5%9E%8B&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#%E9%8C%AF%E8%AA%A4%E6%A8%A1%E5%9E%8B&quot;&gt;#&lt;/a&gt; 錯誤模型&lt;/h2&gt;
@@ -897,9 +897,9 @@ lost lost field that should have
 	
 	<entry>
 		<title>關於消息的三層語義：以 RabbitMQ 為例</title>
-		<link href="https://blog.kenwsc.com/posts/three-semantics-of-rabbitmq/"/>
+		<link href="https://blog.kenwsc.com/posts/2022/three-semantics-of-rabbitmq/"/>
 		<updated>2022-10-22T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/three-semantics-of-rabbitmq/</id>
+		<id>https://blog.kenwsc.com/posts/2022/three-semantics-of-rabbitmq/</id>
 		<content type="html">
 		  &lt;p&gt;對分散式系統來說，消息的可靠性非常重要，想想一個金融應用的場景，如果在支付時，消息遺失了，或是重複遞送了，都會造成使用者的困擾。當我們在系統中引入消息隊列時，我們同時引入了複雜度，這意思是，系統的「處理消息」跟你想的不一定是同一件事。從可靠性的角度來看，「處理消息」的語義可以分為三個層次，第一層是「最多一次」，當你請系統處理消息時，它會幫你進行，但最多一次，並且不保證是否完成；第二層是「最少一次」，系統會幫你處理消息，而且附帶必要的錯誤處理，確保消息至少被完成一次；第三層是「準確一次」，意指消息不多不少，恰恰好被準確處理並完成了一次。&lt;/p&gt;
 &lt;p&gt;當試著從語言學的角度來看待系統時，我們才能規劃出系統的整體面貌。儘管「準確處理一次」有最佳的可靠性，但因為其處理成本，降低了系統整體的吞吐量。在〈Starbucks Does Not Use Two-Phase Commit〉一文中，Gregor Hohpe 精確描繪了星巴克的異步系統。收銀員收費後，將咖啡杯放到隊列中，等待咖啡師處理，再交給取貨區的顧客。這個過程中，收銀員跟咖啡師不會特別確認咖啡杯的狀態，假設咖啡杯被放錯位置，直到顧客反應前都沒有人會知道，這是「最多一次」的語義；但如果咖啡杯掉落到地上，他們可能會重新做一杯新的咖啡，這裡就是「最少一次」的語義。因此我們可以說，星巴克是在「最多一次」的基礎上，有部分操作實現「最少一次」的語義。&lt;/p&gt;
@@ -974,9 +974,9 @@ lost lost field that should have
 	
 	<entry>
 		<title>Goroutine 的併發治理：由錯誤處理談起</title>
-		<link href="https://blog.kenwsc.com/posts/concurrency-of-go-error-handling/"/>
+		<link href="https://blog.kenwsc.com/posts/2022/concurrency-of-go-error-handling/"/>
 		<updated>2022-12-07T00:00:00-00:00</updated>
-		<id>https://blog.kenwsc.com/posts/concurrency-of-go-error-handling/</id>
+		<id>https://blog.kenwsc.com/posts/2022/concurrency-of-go-error-handling/</id>
 		<content type="html">
 		  &lt;p&gt;當需要同時執行多個任務時，Go 開發者會多開 Goroutine 來分擔任務，這稱為併發。併發聽起來似乎很理想，能其他任務等待時，照樣執行需要運算的任務，有效利用 CPU 資源，但如果要用在生產環境，它也需要完善的管理機制。想想看，Goroutine 在哪個情況下會被啟動？哪個情況下會結束？如果任務需要回傳結果，它應該要怎麼回傳？而如果執行中發生錯誤，又應該怎麼處理？&lt;/p&gt;
 &lt;p&gt;我們可以稱呼這類主題為「併發治理」，需要開發者理解執行期的運作，而如何處理好 Goroutine 的開始與結束，讓錯誤能被意識到，可說是併發治理的第一關。&lt;/p&gt;
