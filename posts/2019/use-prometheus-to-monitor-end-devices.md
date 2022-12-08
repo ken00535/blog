@@ -25,7 +25,7 @@ docker run --name prometheus -d -p 9090:9090 quay.io/prometheus/prometheus
 
 安裝好後，在瀏覽器輸入 Prometheus server 的 IP，應該可以看到 Prometheus 自帶的 GUI，如下
 
-![](/img/posts/2019/(.*)/prom-1.png)
+![](/img/posts/2019/use-prometheus-to-monitor-end-devices/prom-1.png)
 
 Expression 可以輸入 Prometheus 的查詢 PromQL，Graph 會依照 PromQL 顯示對應的採集資料，這些採集資料稱為 Metric，up 這個 Metric 表示對應的採集實例(instance)狀態，當 up 值為 1，表示 exporter instance 正常運作。
 
@@ -56,7 +56,7 @@ INFO[0000]  - bonding                                    source="node_exporter.g
 
 Node Exporter 預設的 port 是 9100，在瀏覽器上輸入後，可以看到
 
-![](/img/posts/2019/(.*)/prom-2.png)
+![](/img/posts/2019/use-prometheus-to-monitor-end-devices/prom-2.png)
 
 底下的 Metrics 就是採集到的 Metrics，點開來會看到 Node Exporter 有採集的資訊
 
@@ -125,7 +125,7 @@ docker container restart prometheus
 
 打開瀏覽器的 UI，可以看到出現新的 instance
 
-![](/img/posts/2019/(.*)/prom-3.png)
+![](/img/posts/2019/use-prometheus-to-monitor-end-devices/prom-3.png)
 
 ## Query CPU Usage
 
@@ -143,7 +143,7 @@ docker container restart prometheus
 
 job 跟 mode 是 metric 的 label，扣掉 idle 所佔的使用率後，剩下的使用率就是 CPU 使用率了，按下執行後，Graph 就跑出來啦
 
-![](/img/posts/2019/(.*)/prom-4.png)
+![](/img/posts/2019/use-prometheus-to-monitor-end-devices/prom-4.png)
 
 ## Monitor PRi
 
@@ -176,7 +176,7 @@ scrape_configs:
 
 刷新頁面，觀察結果
 
-![](/img/posts/2019/(.*)/prom-5.png)
+![](/img/posts/2019/use-prometheus-to-monitor-end-devices/prom-5.png)
 
 RPi 的 CPU 使用率快樂抖動中。
 
@@ -184,7 +184,7 @@ RPi 的 CPU 使用率快樂抖動中。
 
 上張 Prometheus 的架構圖
 
-![](/img/posts/2019/(.*)/prom-6.jpg)
+![](/img/posts/2019/use-prometheus-to-monitor-end-devices/prom-6.jpg)
 
 Prometheus 整個生態系有許多組件，在這個 Demo 中，用到的是 Prometheus Server、WebUI、Exporter 等架構圖下半部分，其他不同組件也有各自的用途。使用 Prometheus，我們能夠 Monitor 服務運行的狀況，也可以用它來通知異常（在今年的 COSCUP 中，Line 的 Speaker 就用它來觀察會議室中的活動人數，免得有人借了會議室卻不使用）。
 

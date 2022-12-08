@@ -107,7 +107,7 @@ ax = sns.heatmap(
 plt.show()
 ```
 
-![](/img/posts/2019/(.*)/heatmap-1.webp)
+![](/img/posts/2019/visualize-your-redmine-data/heatmap-1.webp)
 
 ## 修飾 Heatmap
 
@@ -133,13 +133,13 @@ plt.show()
 
 修改顏色；加入遮罩遮掉值是 0 的區段；加入 y 軸標示；加粗格線；讓顯示的區塊為方形；拿掉色彩條。 ax.set_ylim 則是因為 matplotlib 本身的 Bug 會導致圖片只畫一半
 
-![](/img/posts/2019/(.*)/bug-1.webp)
+![](/img/posts/2019/visualize-your-redmine-data/bug-1.webp)
 
 如果不想用開發中的版本，要不就等 3.1.2 版，要不就退回 3.1.0 版，要不就使用 ax.set_ylim 。我不太想動版本，只好乖乖使用指令來調整。
 
 當一切就緒後，我們就可以得到
 
-![](/img/posts/2019/(.*)/heatmap-2.webp)
+![](/img/posts/2019/visualize-your-redmine-data/heatmap-2.webp)
 
 ## 小結
 

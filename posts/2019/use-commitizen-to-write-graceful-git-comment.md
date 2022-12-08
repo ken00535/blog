@@ -81,7 +81,7 @@ fix #100
 
 實際執行 Commitizen，使用 git cz 來取代 git commit
 
-![](/img/posts/2019/(.*)/commitizen-1.png)
+![](/img/posts/2019/use-commitizen-to-write-graceful-git-comment/commitizen-1.png)
 
 可以看到，Commitizen 會很貼心顯示選單讓 user 選擇，只要照著問題跟選單將答案填入就好，就是這麼簡單。
 
@@ -190,7 +190,7 @@ sudo vi /usr/local/lib/node_modules/cz-customizable/questions.js
 
 現在來看一下修改的成果
 
-![](/img/posts/2019/(.*)/commitizen-2.png)
+![](/img/posts/2019/use-commitizen-to-write-graceful-git-comment/commitizen-2.png)
 
 而實際的 log 是
 

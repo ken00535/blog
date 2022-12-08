@@ -18,7 +18,7 @@ git clone https://git.openwrt.org/openwrt/openwrt.git
 cd openwrt
 ```
 
-![](/img/posts/2019/(.*)/console-1.webp)
+![](/img/posts/2019/setup-openwrt-on-virtualbox/console-1.webp)
 
 剛下載下來的 Source code 沒有包含相關的 package，例如 python、driver 等等，因為後續開發會需要用到，先使用 feeds來更新並安裝 package
 
@@ -42,11 +42,11 @@ update -a|<feedname(s)>: Update packages and lists of feeds in feeds.conf .
 
 再來使用 make menuconfig 來選擇要編譯的 package，找不到 package 的話可以用 / 加關鍵字搜尋，搜尋有支援 regular exp 喔！這邊先選擇 python3 、LuCI 、GDB ， Target 用 x86 ，印象檔格式用 ext4
 
-![](/img/posts/2019/(.*)/console-2.webp)
+![](/img/posts/2019/setup-openwrt-on-virtualbox/console-2.webp)
 
 之後用 make -j8 全速編譯
 
-![](/img/posts/2019/(.*)/console-3.webp)
+![](/img/posts/2019/setup-openwrt-on-virtualbox/console-3.webp)
 
 編譯完得到映像壓縮檔，解壓縮
 
@@ -59,12 +59,12 @@ gunzip openwrt-x86-generic-combined-ext4.img.gz
 vboxmanage convertfromraw --format VDI openwrt-x86-generic-combined-ext4.img openwrt_x86.vdi
 再來開啟 VirtualBox，建立 Virtual Machine
 
-![](/img/posts/2019/(.*)/vm-1.webp)
+![](/img/posts/2019/setup-openwrt-on-virtualbox/vm-1.webp)
 
 選擇 Type 為 Linux ，版本為 Linux 2.6 / 3.x / 4.x (32-bit) ，一路 Next 完成掛載
 
 開啟 VirtualBox，可以看到
 
-![](/img/posts/2019/(.*)/vm-2.webp)
+![](/img/posts/2019/setup-openwrt-on-virtualbox/vm-2.webp)
 
 完成！已經在 VirtualBox 上掛載剛剛編譯好的 Openwrt 了！

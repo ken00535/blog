@@ -58,7 +58,7 @@ sudo apt-get install apache2
 
 在瀏覽器中輸入對應 IP，可以看到 apache 的畫面
 
-![](/img/posts/2019/(.*)/feedly-1.png)
+![](/img/posts/2019/use-feedly-to-subscribe-facebooks-group/feedly-1.png)
 
 當現在有一份文件需要對外提供時，可以放到 /var/www 中，外部就能得到這份文件。
 
@@ -66,15 +66,15 @@ sudo apt-get install apache2
 
 因為資安考量，我們不希望將內網曝露到外網中，想在外部架設新的 Server 來提供服務，為了方便 RSS Reader 能找到 Server Address，還需要有個 Domain Name，也就是平常說的網址，這個網址能對應到自行架設的 Server Address。Domain Name 可以向供應商購買，像 Google Domains 就有提供這個服務，價格是 20$/Year
 
-![](/img/posts/2019/(.*)/feedly-2.png)
+![](/img/posts/2019/use-feedly-to-subscribe-facebooks-group/feedly-2.png)
 
 但我們先用免費的 Domain 來測試，交大有無償提供這項服務
 
-![](/img/posts/2019/(.*)/feedly-3.png)
+![](/img/posts/2019/use-feedly-to-subscribe-facebooks-group/feedly-3.png)
 
 註冊並登入後，在網域管理的標籤下，可以新增子網域，輸入自定義的網域名稱
 
-![](/img/posts/2019/(.*)/feedly-4.png)
+![](/img/posts/2019/use-feedly-to-subscribe-facebooks-group/feedly-4.png)
 
 並在 DNS 管理中新增紀錄，輸入名稱與 IP，即可完成申請。如果已經有 GCP 的，可以在 IP 填入 GCP 的 External Address，如果還沒有，先進行下一步，取得 GCP 的 IP。
 
@@ -82,7 +82,7 @@ sudo apt-get install apache2
 
 申請好網域後，就是要架 Server 了。外部 Server 可以用 GCP 架設，具體流程是進入 GCP，開好 VM，安裝需要的軟體，如果不知道怎麼使用 GCP，可以參考[前面的文章](https://blog.kenwsc.com/posts/2019/coding-by-your-smartphone/)，GCP 也有提供 apache 的[安裝說明](https://cloud.google.com/compute/docs/tutorials/basic-webserver-apache?hl=zh-tw)
 
-![](/img/posts/2019/(.*)/feedly-5.png)
+![](/img/posts/2019/use-feedly-to-subscribe-facebooks-group/feedly-5.png)
 
 開通 VM 時，要記得將 Firewalls 的 Allow HTTP traffic、Allow HTTPS traffic 兩項打勾，GCP 才能提供 HTTP 跟 HTTPS 的服務。
 
@@ -97,11 +97,11 @@ sudo ln -s ~/rssfeed ./rssfeed
 
 完成後還要修改網路設定，到網路服務點選 Cloud DNS
 
-![](/img/posts/2019/(.*)/feedly-6.png)
+![](/img/posts/2019/use-feedly-to-subscribe-facebooks-group/feedly-6.png)
 
 建立區域，將 DNS 名稱，就是前面步驟申請的網域名填入
 
-![](/img/posts/2019/(.*)/feedly-7.png)
+![](/img/posts/2019/use-feedly-to-subscribe-facebooks-group/feedly-7.png)
 
 外部就可以用 URL 來使用 GCP 的服務了。
 
@@ -109,7 +109,7 @@ sudo ln -s ~/rssfeed ./rssfeed
 
 現在用 feedly 訂閱剛剛製作完成的 RSS feed，打開 feedly，點選側欄的「+」號，進入探索頁面
 
-![](/img/posts/2019/(.*)/feedly-8.png)
+![](/img/posts/2019/use-feedly-to-subscribe-facebooks-group/feedly-8.png)
 
 在搜尋欄中填入 RSS 的網路位置，例如
 
@@ -119,7 +119,7 @@ http://example.nctu.me/rssfeed/cloudnative.tw.xml
 
 就能在 FEEDS 的訂閱項目中看到訊息啦
 
-![](/img/posts/2019/(.*)/feedly-9.png)
+![](/img/posts/2019/use-feedly-to-subscribe-facebooks-group/feedly-9.png)
 
 是不是很有成就感！
 
@@ -161,7 +161,7 @@ crontab -e
 
 讓我們來看看 feedly 抓資料的速度
 
-![](/img/posts/2019/(.*)/feedly-10.png)
+![](/img/posts/2019/use-feedly-to-subscribe-facebooks-group/feedly-10.png)
 
 該筆資料在 2019/12/07 14:58:24 發表，到 2019/12/08 11:17:51 時抓進 feedly，需要快一天，呃，好慢。因為我們的 cron 是每小時更新，速度慢純粹是 feedly 的問題了，依照 feedly 官方的說法，fetcher 是一小時左右抓取一次，可能它有自己的演算法，會再根據每個 feed 的活躍度修改抓取頻率？
 

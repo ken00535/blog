@@ -59,13 +59,13 @@ func main() {
 
 然後拿出你的 WireShark 抓包，直接看看傳了哪些東西，抓到的 Request 會是
 
-![](/img/posts/2022/(.*)/wireshark_grpc_request_1.webp)
+![](/img/posts/2022/error-as-resource-grpc-error-handling/wireshark_grpc_request_1.webp)
 
 翻譯成白話：gRPC 用 POST method 呼叫 /proto.HelloService/SayHello 的 URL。
 
 也能抓到 Response
 
-![](/img/posts/2022/(.*)/wireshark_grpc_response_1.webp)
+![](/img/posts/2022/error-as-resource-grpc-error-handling/wireshark_grpc_response_1.webp)
 
 在 Header 中可以看到兩個跟 gRPC相關的 header，grpc-status 跟 grpc-message。語意上，這大致可以對應到 HTTP 的 Status Code 跟 Payload。可能有人會覺得奇怪，為什麼 HTTP 已經有一套可以套用的錯誤模型了，gRPC 還需要自己定義 Header？從定義來看，有機會是 HTTP Status Code 的應用情境不符合 gRPC 的情境，像是在 gRPC 中，有些 Status 是 client 獨有，有些是 server 獨有，而 HTTP Status Code 沒分這麼細緻。
 
@@ -93,7 +93,7 @@ status package 是官方提供的 Package，顧名思義，就是讓你可以控
 
 修改後，WireShark 的 Response 變成
 
-![](/img/posts/2022/(.*)/wireshark_grpc_response_2.webp)
+![](/img/posts/2022/error-as-resource-grpc-error-handling/wireshark_grpc_response_2.webp)
 
 原本 grpc-status 變成 3了，對應到 Status 就是 INVALID_ARGUMENT。呼叫者可以知道原來是自己的參數錯誤才導致呼叫異常。
 
@@ -142,7 +142,7 @@ func (s *server) SayHello(context.Context, *emptypb.Empty) (*emptypb.Empty, erro
 
 修改後，用 WireShark 再抓一次
 
-![](/img/posts/2022/(.*)/wireshark_grpc_response_3.webp)
+![](/img/posts/2022/error-as-resource-grpc-error-handling/wireshark_grpc_response_3.webp)
 
 看到 grpc-status-details-bin 冒出來了，後面是 base64 編碼過的內容，如果丟進 decode 的話，可以得到
 
@@ -156,7 +156,7 @@ lost lost field that should have
 
 用 Postman 呼叫 gRPC，也能看到同樣的錯誤訊息。
 
-![](/img/posts/2022/(.*)/postman.webp)
+![](/img/posts/2022/error-as-resource-grpc-error-handling/postman.webp)
 
 ## 客戶端
 

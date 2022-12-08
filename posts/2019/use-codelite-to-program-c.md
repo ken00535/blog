@@ -22,19 +22,19 @@ CodeLite 底層推薦用 MinGW 中的 GNU toolchain 來編譯，如果對象平�
 
 MinGW 是一套 Windows 下的開發環境，讓 Windows 的開發者也能使用 GNU 等 Linux 工具。要安裝 MinGW，到 [MinGW 官網](http://mingw.org/)下載安裝程式
 
-![](/img/posts/2019/(.*)/codelite-1.png)
+![](/img/posts/2019/use-codelite-to-program-c/codelite-1.png)
 
 安裝時，在 Basic Setup 中選擇 mingw32-base-bin、mingw32-gcc-g++-bin、msys-base-bin
 
-![](/img/posts/2019/(.*)/codelite-2.png)
+![](/img/posts/2019/use-codelite-to-program-c/codelite-2.png)
 
 安裝完後，要將執行檔路徑加入環境變數，讓 CodeLite 能抓到底層。打開控制台\系統及安全性\系統，選擇[進階系統設定]，點選[環境變數]
 
-![](/img/posts/2019/(.*)/codelite-3.png)
+![](/img/posts/2019/use-codelite-to-program-c/codelite-3.png)
 
 在系統變數中，編輯 Path
 
-![](/img/posts/2019/(.*)/codelite-4.png)
+![](/img/posts/2019/use-codelite-to-program-c/codelite-4.png)
 
 將 C:\MinGW\bin 加入 Path 中。
 
@@ -42,7 +42,7 @@ MinGW 是一套 Windows 下的開發環境，讓 Windows 的開發者也能使�
 
 接著來安裝 CodeLite，到官網下載安裝檔，官網上可以看到 CodeLite 主要支援三款語言：C++、php、node.js，主要 TA 是放在後端上
 
-![](/img/posts/2019/(.*)/codelite-5.png)
+![](/img/posts/2019/use-codelite-to-program-c/codelite-5.png)
 
 下載，解壓縮，執行，一路安裝精靈到結束，沒難度。
 
@@ -50,21 +50,21 @@ MinGW 是一套 Windows 下的開發環境，讓 Windows 的開發者也能使�
 
 首次執行 CodeLite 時，先用 Setup Wizard 設定環境，開發的環境先用 C/C++
 
-![](/img/posts/2019/(.*)/codelite-6.png)
+![](/img/posts/2019/use-codelite-to-program-c/codelite-6.png)
 
 如果前面有成功安裝 MinGW 跟 g++，這邊選擇 Compiler 時就會看到
 
-![](/img/posts/2019/(.*)/codelite-7.png)
+![](/img/posts/2019/use-codelite-to-program-c/codelite-7.png)
 
 ## Test Example
 
 設定完後，用 CodeLite 來寫一支簡單的 C++，確認功能正常。先建立工作空間，在工作空間點右鍵，加入新專案
 
-![](/img/posts/2019/(.*)/codelite-8.png)
+![](/img/posts/2019/use-codelite-to-program-c/codelite-8.png)
 
 選擇用 g++ 的 Console Template
 
-![](/img/posts/2019/(.*)/codelite-9.png)
+![](/img/posts/2019/use-codelite-to-program-c/codelite-9.png)
 
 CodeLite 會套用範本長出基本檔案
 
@@ -101,7 +101,7 @@ int main()
 
 來建置並執行程式，先在導覽列選擇 Build > Clean Project ，把舊的檔案（如果有的話）清空，選擇 Run 來建置執行
 
-![](/img/posts/2019/(.*)/codelite-10.png)
+![](/img/posts/2019/use-codelite-to-program-c/codelite-10.png)
 
 程式執行完成，開發環境建好啦！
 
