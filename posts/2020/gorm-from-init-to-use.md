@@ -1,5 +1,5 @@
 ---
-title: GROM：從建置到 CRUD
+title: GORM：從建置到 CRUD
 description: Golang 有許多第三方的 ORM 套件，例如 lib/pq、go-pg、gorm、pgx，其中 gorm 是 GitHub 上星星數較多的專案，而且能對應到不同類型的資料庫，在 Golang 中常被使用。本文會講解如何使用 gorm 來操作 Postgres，順帶走一次後端資料庫開發的基本流程。…
 date: 2020-07-26
 scheduled: 2020-07-26
