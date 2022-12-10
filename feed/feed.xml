@@ -1348,7 +1348,7 @@ age: 18
 	</entry>
 	
 	<entry>
-		<title>GROM：從建置到 CRUD</title>
+		<title>GORM：從建置到 CRUD</title>
 		<link href="https://blog.kenwsc.com/posts/2020/gorm-from-init-to-use/"/>
 		<updated>2020-07-26T00:00:00-00:00</updated>
 		<id>https://blog.kenwsc.com/posts/2020/gorm-from-init-to-use/</id>
