@@ -2448,7 +2448,7 @@ Generics are convenient but they come at a cost in complexity in the type system
 		<id>https://blog.kenwsc.com/posts/2020/code-generator-by-go-template/</id>
 		<content type="html">
 		  &lt;p&gt;開發軟體時，常常會發現有些函式或方法很類似，例如對 Callback Function 來說，開發者都需要註冊回調函式，並在適當的時機，將資料交給回調函式處理，我們可以將這兩個動作，稱為 OnAction 跟 EmitAction。儘管繼承或組合能讓程式碼重複使用類似的組件，幫助開發者節省時間，但對於較複雜的情況，像是不同類(Class)的函式名稱也要不同時，仍需要仰賴開發者自行編寫。&lt;/p&gt;
-&lt;p&gt;試著想想，如果開發者僅僅寫設定檔(Config File)，就有程式能根據設定檔來自動產生程式碼，不是很美好的事嗎？這是有的，在實務上，這類用於產生程式的程式被稱為 Code Generator，例如&lt;a href=&quot;https://blog.kenwsc.com/posts/2020/go-generic-alter-plan-assert-and-codegen.md&quot;&gt;前面&lt;/a&gt;介紹過的 genny。Golang 有內建 generate 這個命令行工具，能幫助開發者將 Code Generator 跟編譯更密切結合在一起。&lt;/p&gt;
+&lt;p&gt;試著想想，如果開發者僅僅寫設定檔(Config File)，就有程式能根據設定檔來自動產生程式碼，不是很美好的事嗎？這是有的，在實務上，這類用於產生程式的程式被稱為 Code Generator，例如&lt;a href=&quot;https://blog.kenwsc.com/posts/2020/go-generic-alter-plan-assert-and-codegen&quot;&gt;前面&lt;/a&gt;介紹過的 genny。Golang 有內建 generate 這個命令行工具，能幫助開發者將 Code Generator 跟編譯更密切結合在一起。&lt;/p&gt;
 &lt;p&gt;本文會用 Callback 的 Generator 當例子，講解如何開發並使用一套 Code Generator。需要 Clone 程式碼的，可以到&lt;a href=&quot;https://github.com/ken00535/golang-medium-example&quot;&gt;這裡&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&quot;design-a-config-file&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#design-a-config-file&quot;&gt;#&lt;/a&gt; Design a Config File&lt;/h2&gt;
 &lt;p&gt;我們的目標是設計一套程式，可以依照 Config 來產生 Callback Function，Callback Function 能根據 Config，而有不同的名字跟引數型別。對像 Golang 這類強型別又沒有泛型的語言來說，這是很實用的功能。&lt;/p&gt;
