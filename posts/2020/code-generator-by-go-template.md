@@ -10,7 +10,7 @@ layout: zh-tw/layouts/post.njk
 
 開發軟體時，常常會發現有些函式或方法很類似，例如對 Callback Function 來說，開發者都需要註冊回調函式，並在適當的時機，將資料交給回調函式處理，我們可以將這兩個動作，稱為 OnAction 跟 EmitAction。儘管繼承或組合能讓程式碼重複使用類似的組件，幫助開發者節省時間，但對於較複雜的情況，像是不同類(Class)的函式名稱也要不同時，仍需要仰賴開發者自行編寫。
 
-試著想想，如果開發者僅僅寫設定檔(Config File)，就有程式能根據設定檔來自動產生程式碼，不是很美好的事嗎？這是有的，在實務上，這類用於產生程式的程式被稱為 Code Generator，例如[前面](/posts/2020/go-generic-alter-plan-assert-and-codegen.md)介紹過的 genny。Golang 有內建 generate 這個命令行工具，能幫助開發者將 Code Generator 跟編譯更密切結合在一起。
+試著想想，如果開發者僅僅寫設定檔(Config File)，就有程式能根據設定檔來自動產生程式碼，不是很美好的事嗎？這是有的，在實務上，這類用於產生程式的程式被稱為 Code Generator，例如[前面](/posts/2020/go-generic-alter-plan-assert-and-codegen)介紹過的 genny。Golang 有內建 generate 這個命令行工具，能幫助開發者將 Code Generator 跟編譯更密切結合在一起。
 
 本文會用 Callback 的 Generator 當例子，講解如何開發並使用一套 Code Generator。需要 Clone 程式碼的，可以到[這裡](https://github.com/ken00535/golang-medium-example)。
 

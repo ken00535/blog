@@ -9,7 +9,7 @@ tags:
 layout: zh-tw/layouts/post.njk
 ---
 
-[以前](/posts/2020/use-conan-to-manage-c-package.md)我們討論過如何在 C/C++ 的專案中，使用 Conan 管理第三方套件。當開發應用程式時，只要用 Conan 就能引入現成的函式庫；但如果角色轉換，開發的不是應用程式，而是函式庫，為方便他人引用，就需要將函式庫打包成 Conan Package，並上傳到 Server。在常見的開發情境中，開發者既需要引用別人的函式庫，也期待自己的函式庫能讓別人引用。
+[以前](/posts/2020/use-conan-to-manage-c-package)我們討論過如何在 C/C++ 的專案中，使用 Conan 管理第三方套件。當開發應用程式時，只要用 Conan 就能引入現成的函式庫；但如果角色轉換，開發的不是應用程式，而是函式庫，為方便他人引用，就需要將函式庫打包成 Conan Package，並上傳到 Server。在常見的開發情境中，開發者既需要引用別人的函式庫，也期待自己的函式庫能讓別人引用。
 
 本文會講解如何編寫 Conan 的 Recipe，打包 C/C++ 的函式庫，並在實際的應用程式中引用。
 
@@ -118,7 +118,7 @@ hello 已經從 GitHub 上 Clone 下來，放置於 source 資料夾。
 
 有原始碼後，緊接著來建置函式庫。
 
-Conan Recipe 有支援幾款建置工具，如 CMake、MSBuild，如果 Source Code 內還沒有建置配置，建議可以用 [CMake](/posts/2020/use-cmake-to-build-cross-platform-application.md)，跨平台兼容性更佳。
+Conan Recipe 有支援幾款建置工具，如 CMake、MSBuild，如果 Source Code 內還沒有建置配置，建議可以用 [CMake](/posts/2020/use-cmake-to-build-cross-platform-application)，跨平台兼容性更佳。
 
 hello 專案中已經有 CMakeList.txt，因此使用 CMake 為建置工具，修改 `conanfile.py`，加入 build method，該 method 用於描述 build 的方式
 
