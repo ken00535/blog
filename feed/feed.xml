@@ -1689,7 +1689,7 @@ WARNING If model has DeletedAt field, GORM will only set field DeletedAt’s val
 		<updated>2020-08-16T00:00:00-00:00</updated>
 		<id>https://blog.kenwsc.com/posts/2020/database-migration-by-go/</id>
 		<content type="html">
-		  &lt;p&gt;接續&lt;a href=&quot;https://blog.kenwsc.com/posts/2020/gorm-from-init-to-use.md&quot;&gt;前面&lt;/a&gt;，繼續來討論資料庫議題吧。&lt;/p&gt;
+		  &lt;p&gt;接續&lt;a href=&quot;https://blog.kenwsc.com/posts/2020/gorm-from-init-to-use&quot;&gt;前面&lt;/a&gt;，繼續來討論資料庫議題吧。&lt;/p&gt;
 &lt;p&gt;在商務初期，追求的是驗證市場，這時資料庫往往只有相對簡單的版本，各種欄位也還不是很齊全。隨著商業模式逐漸成熟，資料庫會需要負擔更多的營運功能，也會需要在原有表格中加入新欄位。資料庫的版本管理問題就出現了。&lt;/p&gt;
 &lt;p&gt;我們通常稱呼資料庫版本遷移為 Migration，在 Laravel 或 RoR 中都有整合好的 Migration 工具，而 Golang 目前仍需要仰賴自己動手，golang-migrate 是現在比較成熟的專案。本文會講解如何使用 golang-migrate 的 CLI 跟函式庫，來建立資料庫 Migration。&lt;/p&gt;
 &lt;h2 id=&quot;introduction&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#introduction&quot;&gt;#&lt;/a&gt; Introduction&lt;/h2&gt;
@@ -2181,7 +2181,7 @@ Generics are convenient but they come at a cost in complexity in the type system
 		<updated>2020-10-11T00:00:00-00:00</updated>
 		<id>https://blog.kenwsc.com/posts/2020/conan-build-and-manage-c-cpp-artifacts/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;a href=&quot;https://blog.kenwsc.com/posts/2020/use-conan-to-manage-c-package.md&quot;&gt;以前&lt;/a&gt;我們討論過如何在 C/C++ 的專案中，使用 Conan 管理第三方套件。當開發應用程式時，只要用 Conan 就能引入現成的函式庫；但如果角色轉換，開發的不是應用程式，而是函式庫，為方便他人引用，就需要將函式庫打包成 Conan Package，並上傳到 Server。在常見的開發情境中，開發者既需要引用別人的函式庫，也期待自己的函式庫能讓別人引用。&lt;/p&gt;
+		  &lt;p&gt;&lt;a href=&quot;https://blog.kenwsc.com/posts/2020/use-conan-to-manage-c-package&quot;&gt;以前&lt;/a&gt;我們討論過如何在 C/C++ 的專案中，使用 Conan 管理第三方套件。當開發應用程式時，只要用 Conan 就能引入現成的函式庫；但如果角色轉換，開發的不是應用程式，而是函式庫，為方便他人引用，就需要將函式庫打包成 Conan Package，並上傳到 Server。在常見的開發情境中，開發者既需要引用別人的函式庫，也期待自己的函式庫能讓別人引用。&lt;/p&gt;
 &lt;p&gt;本文會講解如何編寫 Conan 的 Recipe，打包 C/C++ 的函式庫，並在實際的應用程式中引用。&lt;/p&gt;
 &lt;p&gt;需要 Clone 程式碼的，可以到&lt;a href=&quot;https://github.com/ken00535/c-cpp-medium-example&quot;&gt;這裡&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&quot;create-conan-project&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#create-conan-project&quot;&gt;#&lt;/a&gt; Create Conan Project&lt;/h2&gt;
@@ -2228,7 +2228,7 @@ Generics are convenient but they come at a cost in complexity in the type system
 &lt;p&gt;hello 已經從 GitHub 上 Clone 下來，放置於 source 資料夾。&lt;/p&gt;
 &lt;h2 id=&quot;build-library&quot;&gt;&lt;a class=&quot;direct-link&quot; href=&quot;#build-library&quot;&gt;#&lt;/a&gt; Build Library&lt;/h2&gt;
 &lt;p&gt;有原始碼後，緊接著來建置函式庫。&lt;/p&gt;
-&lt;p&gt;Conan Recipe 有支援幾款建置工具，如 CMake、MSBuild，如果 Source Code 內還沒有建置配置，建議可以用 &lt;a href=&quot;https://blog.kenwsc.com/posts/2020/use-cmake-to-build-cross-platform-application.md&quot;&gt;CMake&lt;/a&gt;，跨平台兼容性更佳。&lt;/p&gt;
+&lt;p&gt;Conan Recipe 有支援幾款建置工具，如 CMake、MSBuild，如果 Source Code 內還沒有建置配置，建議可以用 &lt;a href=&quot;https://blog.kenwsc.com/posts/2020/use-cmake-to-build-cross-platform-application&quot;&gt;CMake&lt;/a&gt;，跨平台兼容性更佳。&lt;/p&gt;
 &lt;p&gt;hello 專案中已經有 CMakeList.txt，因此使用 CMake 為建置工具，修改 &lt;code&gt;conanfile.py&lt;/code&gt;，加入 build method，該 method 用於描述 build 的方式&lt;/p&gt;
 &lt;pre class=&quot;language-py&quot;&gt;&lt;code class=&quot;language-py&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; conans &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; ConanFile&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; CMake&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; tools&lt;br&gt;&lt;span class=&quot;token comment&quot;&gt;# ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;    cmake &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; CMake&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;    cmake&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;configure&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;source_folder&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;    cmake&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;build&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;執行 conan install 命令，將 conan 配置輸出到 build 資料夾，方便 CMake 引用&lt;/p&gt;
