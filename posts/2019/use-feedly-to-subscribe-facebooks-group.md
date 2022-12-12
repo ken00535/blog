@@ -5,7 +5,6 @@ date: 2019-12-08
 scheduled: 2019-12-08
 tags:
   - GCP
-  - RSS
 layout: zh-tw/layouts/post.njk
 ---
 

@@ -5,7 +5,7 @@ date: 2019-08-31
 scheduled: 2019-08-31
 tags:
   - Python
-  - Redmine
+  - DevOps
 layout: zh-tw/layouts/post.njk
 ---
 

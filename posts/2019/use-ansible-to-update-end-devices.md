@@ -5,7 +5,6 @@ date: 2019-11-26
 scheduled: 2019-11-26
 tags:
   - Cloud Native
-  - Ansible
 layout: zh-tw/layouts/post.njk
 ---
 

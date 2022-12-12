@@ -4,7 +4,7 @@ description: Protocol buffers，是由 Google 設計的結構化序列化資料�
 date: 2020-06-26
 scheduled: 2020-06-26
 tags:
-  - Protobuf
+  - Web
   - Go
 layout: zh-tw/layouts/post.njk
 ---

@@ -5,7 +5,6 @@ date: 2019-02-03
 scheduled: 2019-02-03
 tags:
   - VM
-  - Openwrt
 layout: zh-tw/layouts/post.njk
 ---
 
