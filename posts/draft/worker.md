@@ -11,8 +11,4 @@ draft: true
 
 防止洩漏
 
-無窮迴圈
-
-沒有正確關閉 channel
-
-記憶體池(GPM)
+https://gobyexample.com/worker-pools
