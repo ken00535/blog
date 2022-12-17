@@ -1362,8 +1362,11 @@ header aside {
   color: #4b4b4b;
 }
 
-.post+div {
+.post {
   padding-top: 35px;
+}
+
+.post+div {
   margin-top: 35px;
   border-top: 1px solid #ccc;
 }
