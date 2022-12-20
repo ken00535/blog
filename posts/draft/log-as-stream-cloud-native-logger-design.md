@@ -9,4 +9,4 @@ layout: zh-tw/layouts/post.njk
 draft: true
 ---
 
-防止洩漏
+這個從 12 app 來談，重點的是實踐方式

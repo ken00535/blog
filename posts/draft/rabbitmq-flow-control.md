@@ -1,5 +1,5 @@
 ---
-title: Goroutine 記憶體管理
+title: rabbitmq 的流量控制
 description: 
 date: 2022-10-22
 scheduled: 2022-10-22
@@ -9,4 +9,4 @@ layout: zh-tw/layouts/post.njk
 draft: true
 ---
 
-防止洩漏
+談 prefetch，還有 rabbitmq 怎麼控制流量

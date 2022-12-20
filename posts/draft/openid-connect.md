@@ -1,5 +1,5 @@
 ---
-title: Goroutine 記憶體管理
+title: openid connect
 description: 
 date: 2022-10-22
 scheduled: 2022-10-22
@@ -9,4 +9,4 @@ layout: zh-tw/layouts/post.njk
 draft: true
 ---
 
-防止洩漏
+延續 Oauth 往下談

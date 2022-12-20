@@ -1,5 +1,5 @@
 ---
-title: Goroutine 記憶體管理
+title: 用 new relic 來建
 description: 
 date: 2022-10-22
 scheduled: 2022-10-22
@@ -9,4 +9,4 @@ layout: zh-tw/layouts/post.njk
 draft: true
 ---
 
-防止洩漏
+應該要擴大談 open telemetry

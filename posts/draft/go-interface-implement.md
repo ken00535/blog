@@ -1,5 +1,5 @@
 ---
-title: 閉包
+title: go 的 interface 實現
 description: 
 date: 2022-10-22
 scheduled: 2022-10-22
@@ -9,6 +9,4 @@ layout: zh-tw/layouts/post.njk
 draft: true
 ---
 
-input / output，input 從哪來
-
-分配到堆上
+談語言怎麼設計這個，偏向談語言底層
