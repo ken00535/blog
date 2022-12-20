@@ -1,5 +1,5 @@
 ---
-title: Goroutine 記憶體管理
+title: 日誌作為事件流：雲原生的日誌設計
 description: 
 date: 2022-10-22
 scheduled: 2022-10-22

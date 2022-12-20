@@ -16,3 +16,5 @@ draft: true
 沒有正確關閉 channel
 
 記憶體池(GPM)
+
+生命週期管理，context 的底層原理
