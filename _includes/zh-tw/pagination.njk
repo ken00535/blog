@@ -19,9 +19,21 @@
       </li>
     {% endif %}
 {%- for pageEntry in pagination.pages %}
-    {% if (currentPage >= loop.index0 - 2) and (currentPage <= loop.index0 + 2) %}
+    {% if loop.first %}
+      <li><a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
+      {% if currentPage > 3 %}
+      <li>...</li>
+      {% endif %}
+    {% endif %}
+    {% if (currentPage >= loop.index0 - 2) and (currentPage <= loop.index0 + 2) and not loop.first and not loop.last %}
       {% set isCurrent = (page.url == pagination.hrefs[ loop.index0 ]) %}
       <li {% if isCurrent %} class="current"{% endif %}><a {% if isCurrent %} aria-current="page"{% endif %} href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
+    {% endif %}
+    {% if loop.last %}
+      {% if currentPage < loop.length - 4 %}
+      <li>...</li>
+      {% endif %}
+      <li><a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
     {% endif %}
 {%- endfor %}
     {% if pagination.href.next %}
