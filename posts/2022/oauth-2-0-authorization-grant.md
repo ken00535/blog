@@ -6,6 +6,7 @@ scheduled: 2022-11-09
 tags:
   - Web
   - Authorization
+  - Security
 layout: zh-tw/layouts/post.njk
 ---
 
@@ -30,7 +31,7 @@ layout: zh-tw/layouts/post.njk
 ```bash
 HTTP/1.1 302 Moved Temporarily
 x-powered-by: Express
-Location: [http://localhost:9001/authorize?response_type=code&client](http://localhost:9001/authorize?response_type=code&scope=foo&client)
+Location: http://localhost:9001/authorize?response_type=code&client
 _id=oauth-client-1&redirect_uri=http%3A%2F%2Flocalhost%3A9000%2Fcallback
 Vary: Accept
 ```
@@ -55,7 +56,7 @@ Host: localhost:9001
 
 ```bash
 HTTP/1.1 302 Found
-Location: [https://client.example.com/cb?code=SplxlOBeZQQYbYS6WxSbIA](https://client.example.com/cb?code=SplxlOBeZQQYbYS6WxSbIA)
+Location: https://client.example.com/cb?code=SplxlOBeZQQYbYS6WxSbIA
 ```
 
 其中參數 code 是授權碼。
@@ -106,7 +107,7 @@ Content-type: application/json
 ```bash
 HTTP/1.1 302 Moved Temporarily
 x-powered-by: Express
-Location: [http://localhost:9001/authorize?response_type=code&scope=read&client](http://localhost:9001/authorize?response_type=code&scope=foo&client)
+Location: http://localhost:9001/authorize?response_type=code&scope=read&client
 _id=oauth-client-1&redirect_uri=http%3A%2F%2Flocalhost%3A9000%2Fcallback
 Vary: Accept
 ```
@@ -144,7 +145,7 @@ Content-type: application/json
 用時序圖來看會比較容易理解。攻擊者先執行 (C.1) 的流程，直接跟授權伺服器互動，拿到授權碼。接著，他誘導資源擁有者使用授權碼跟客戶端互動(C.2)，將授權碼換成 Token，這件事做起來很簡單，只要讓資源擁有者瀏覽惡意頁面，並在頁面中放入
 
 ```html
-<img src="[https://ouauthclient.com/callback?code=ATTACKER_AUTHORIZATION_CODE](https://ouauthclient.com/callback?code=ATTACKER_AUTHORIZATION_CODE)">
+<img src="https://ouauthclient.com/callback?code=ATTACKER_AUTHORIZATION_CODE">
 ```
 
 瀏覽器會以為這是圖片，自動發出 GET 請求給客戶端，資源擁有者不會知道偽造請求已經默默送出。
@@ -158,7 +159,7 @@ Content-type: application/json
 ```bash
 HTTP/1.1 302 Moved Temporarily
 x-powered-by: Express
-Location: [http://localhost:9001/authorize?response_type=code&scope=read&client](http://localhost:9001/authorize?response_type=code&scope=foo&client)
+Location: http://localhost:9001/authorize?response_type=code&scope=read&client
 _id=oauth-client-1&redirect_uri=http%3A%2F%2Flocalhost%3A9000%2Fcallback&
 state=Lwt50DDQKUB8U7jtfLQCVGDL9cnmwHH1
 Vary: Accept
@@ -170,7 +171,7 @@ Vary: Accept
 
 ```bash
 HTTP 302 Found
-Location: [http://localhost:9000/oauth_callback?code=8V1pr0rJ&state=Lwt50DDQKU](http://localhost:9000/oauth_callback?code=8V1pr0rJ&state=Lwt50DDQKU)B8U7jtfLQCVGDL9cnmwHH1
+Location: http://localhost:9000/oauth_callback?code=8V1pr0rJ&state=Lwt50DDQKUB8U7jtfLQCVGDL9cnmwHH1
 ```
 
 客戶端收到 (C.2) 的請求後，驗證 state 跟 (A) 是否相同。對攻擊者來說，他偽造的請求將會被客戶端擋下，因為「客戶端的每個請求都能辨識，只要攻擊者不知道辨識方式，他就無法偽造」。
@@ -197,7 +198,7 @@ Location: [http://localhost:9000/oauth_callback?code=8V1pr0rJ&state=Lwt50DDQKU](
 
 ```bash
 HTTP/1.1 302 Found
-Location: [https://client.example.com/callback?error=access_denied&](https://client.example.com/cb?error=access_denied&state=xyz)error_description=resource_owner_reject[&state=](https://client.example.com/cb?error=access_denied&state=xyz)Lwt50DDQKUB8U7jtfLQCVGDL9cnmwHH1
+Location: https://client.example.com/callback?error=access_denied&error_description=resource_owner_reject&state=Lwt50DDQKUB8U7jtfLQCVGDL9cnmwHH1
 ```
 
 有兩個新參數
@@ -221,7 +222,7 @@ Location: [https://client.example.com/callback?error=access_denied&](https://cli
 
 ```bash
 HTTP/1.1 302 Moved Temporarily
-Location: [http://localhost:9001/authorize?response_type=token&scope=read&client_](http://localhost:9001/authorize?response_type=token&scope=foo&client_)id=oauth-client-1&redirect_uri=http%3A%2F%2Flocalhost%3A9000%2Fcallback&state=Lwt50DDQKUB8U7jtfLQCVGDL9cnmwHH1
+Location: http://localhost:9001/authorize?response_type=token&scope=read&client_id=oauth-client-1&redirect_uri=http%3A%2F%2Flocalhost%3A9000%2Fcallback&state=Lwt50DDQKUB8U7jtfLQCVGDL9cnmwHH1
 Vary: Accept
 ```
 

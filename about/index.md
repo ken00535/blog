@@ -26,8 +26,8 @@ eleventyNavigation:
 
 ## 關於這個網站
 
-這個 Blog 是在 2022 年建立的，使用的是 GitHub Page + Eleventy，主題是 [eleventy-high-performance-blog](https://github.com/google/eleventy-high-performance-blog)，Fork 自 Cymetric 的 Tech Blog。
+這個 Blog 是在 2022 年建立的，使用的是 GitHub Page + Eleventy，主題是由 [cymetrics/blog](https://github.com/cymetrics/blog) 改寫。
 
-起因是 Medium 會自動替文章加上 noindex，阻止 Google 建立索引，我只好自架 Blog 來放平常寫的東西。這裡的定位是技術取向，談的都是我正在研究的領域，目前主要是關於後端技術。
+我原本是用 Medium 來寫技術文章，後來希望有個自己的網站，能碰更多技術底。這裡的定位是技術取向，談的都是我正在研究的領域，目前主要是關於後端技術。
 
 如果想要持續追蹤這個 Blog 的文章，你可以用 Feedly 訂閱 [RSS](https://blog.kenwsc.com/feed/feed.xml)。
