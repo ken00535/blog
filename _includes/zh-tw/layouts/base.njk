@@ -83,9 +83,14 @@
     <header>
       <nav>
         <div id="nav">
+          <div class="nav-title">
+            <a class="nav-logo" href="{{ '/' | url }}" title="Homepage"></a>
+            <label for="menu__control" class="menu__btn">
+              <span>Menu</span>
+            </label>
+          </div>
           {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
           <div class ="nav__links">
-            <a href="{{ '/' | url }}" title="Homepage">Home</a>
             {%- for entry in collections.all | eleventyNavigation %}
               {% if "/en" not in entry.url %}
                 <a href="{{ entry.url | url }}">{{ entry.title }}</a>
