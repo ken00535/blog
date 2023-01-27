@@ -2,7 +2,7 @@
 layout: zh-tw/layouts/base.njk
 title: 關於我
 eleventyNavigation:
-  key: About
+  key: 關於我
   order: 3
 ---
 
