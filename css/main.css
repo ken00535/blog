@@ -1922,6 +1922,7 @@ footer>* {
   .nav__links a {
     text-align: center;
     margin-left: 56px;
+    width: max-content;
   }
 
   .postlist__item {
