@@ -12,6 +12,15 @@ draft: false
 
 從併發的角度來看，Goroutine 跟 Thread 的概念很類似，都是將任務交給一個執行單元來處理。然而不同的是，Goroutine 將調度放在用戶態，因此更加輕量，也能避免多餘的 Context Switch。我們可以說，Go 的併發處理是由語言原生支援，有著更好的開發者體驗，但也因此更容易忘記底層仍存在著輕量成本，當這些成本積沙成塔，就會造成 Out of Memory。這篇文章會從 Goroutine 的生命週期切入，試著說明在併發的情境中，應該如何保持 Goroutine 的正常運作。
 
+
+因為這篇講的內容會比較底層，如果對應用情境不熟的人，建議先看過同系列
+
+- [Goroutine 的併發治理：由錯誤處理談起](/posts/2022/concurrency-of-go-error-handling)
+- [Goroutine 的併發治理：值是怎麼傳遞？](/posts/2022/concurrency-of-go-input-and-output)
+- [Goroutine 的併發治理：管理 Worker Pool](/posts/2022/concurrency-of-go-worker-pool)
+
+再回來看這篇，應該會更容易理解。
+
 ## Goroutine 的資源使用量
 
 讓我們看個最簡單的例子，假設現在同時開 3M 個 Goroutine 來執行任務
